@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+:root {
+  /* COLORS */
+  --primaryC: #007ddb;
+  --secondayC: #db1b16;
+  --thirdC: #d8db16;
+  --fourthC: #8d8f07;
+
+  /* FONT */
+  --fontSize: 1rem;
+  --fontFam: "Bungee Inline";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primaryC);
+  font-weight: 800;
+  height: 100vh;
+  width: 100%;
+}
+
+.outer_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondayC);
+  width: 25%;
+  height: auto;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: auto;
+}
+
+/* CLICK HERE */
+.clickHere_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.clickHere {
+  background-color: var(--fourthC);
+  font-family: var(--fontFam);
+  color: #fff;
+  transition: 0.5s;
+}
+
+.clickHere:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: var(--thirdC);
+}
+
+.clickHere,
+.linkButtons {
+  font-size: var(--fontSize);
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+/* LINKS */
+.links_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transition: 0.5s;
+  transform-origin: top;
+}
+
+.linkButtons {
+  background-color: var(--thirdC);
+  font-family: var(--fontFam);
+  transition: 0.5s;
+}
+
+.linkButtons:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--fourthC);
+}
+
+.link_div_visible {
+  transform: scaleY(1);
+}

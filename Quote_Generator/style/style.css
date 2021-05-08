@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #997132;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vw;
+  width: 60%;
+  border: 10px solid #fff;
+  background-color: #437199;
+  transform: scale(0.9);
+  transition: 0.7s ease-in-out;
+}
+.container:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.568);
+  transform: scale(1);
+}
+.container .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 20%;
+  margin: 10px;
+  padding: 10px;
+  outline: none;
+  border-radius: 50px;
+  font-size: calc(0.1rem + 1.2vw);
+  font-weight: 700;
+  background-color: #ffd187;
+  font-family: "Roboto Mono", monospace;
+}
+.container .button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #e6b363;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.568);
+}
+.container .quote_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  height: 50%;
+  width: auto;
+  padding: 15px;
+  margin-top: 15px;
+  font-size: calc(0.1rem + 2.5vw);
+  font-weight: 800;
+  font-family: "Xanh Mono", monospace;
+}
+.container .author_div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  height: 15%;
+  width: auto;
+  font-size: calc(0.1rem + 1.5vw);
+  font-weight: 700;
+  font-family: "Roboto Mono", monospace;
+}
+
+/*# sourceMappingURL=style.css.map */

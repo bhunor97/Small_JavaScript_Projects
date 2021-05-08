@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+body {
+  color: #000;
+  background-color: lightgreen;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 10px;
+}
+
+/* TEXT INPUT SECTION */
+.textInput_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 150px;
+  width: auto;
+  padding: 5px;
+}
+
+.textInput_section h2 {
+  padding: 15px;
+  margin: 10px;
+}
+
+.textInput_section input {
+  width: 70%;
+  padding: 15px;
+  text-align: center;
+}
+
+/* BUTTON */
+.button_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50%;
+  margin: 15px;
+}
+
+button {
+  padding: 10px;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+/* TEXT OUTPUT SECTION */
+.textOutput_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 5px;
+}
+
+.textOutput_section h2 {
+  padding: 15px;
+  margin: 10px;
+}
+
+.textOutput_section .textOutput {
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+}

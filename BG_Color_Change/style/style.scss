@@ -1,0 +1,39 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$primary: #333;
+$secondary: #000;
+
+body {
+  background-color: $primary;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#button {
+  border: 1px solid white;
+  padding: 5px;
+  height: 50px;
+  width: 200px;
+  font-family: "Zen Dots", cursive;
+  outline: none;
+  border-radius: 25px;
+  box-shadow: 4px 4px 4px #000;
+  // transition: 200ms ease;
+  &:hover {
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+  }
+  //   &:focus {
+  //     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.699);
+  //   }
+}

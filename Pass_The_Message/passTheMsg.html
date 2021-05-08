@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="passTheMsg.css" />
+  </head>
+  <body>
+    <form>
+      <section class="textInput_section">
+        <h2>A Message You Would Like To Pass</h2>
+        <input
+          id="textInputBar"
+          type="text"
+          name="textInputBar"
+          autocomplete="off"
+          required
+          placeholder="Enter Your Message Here"
+        />
+      </section>
+      <div class="button_div">
+        <button id="button" type="submit">Submit</button>
+        <button type="reset" id="resetButton">Reset</button>
+      </div>
+      <section class="textOutput_section">
+        <h2 id="h2Delivered">Last Message Delivered:</h2>
+        <ul id="textOutput" class="textOutput"></ul>
+      </section>
+    </form>
+    <script src="passTheMsg.js"></script>
+  </body>
+</html>

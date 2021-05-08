@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceland&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+:root {
+  /* COLORS */
+  --primaryC: #00eef5;
+  --secondaryC: #0bdeaa;
+  --thirdC: #0d75fa;
+  --fourthC: #0dfa7c;
+  --fifthC: #0b9fde;
+  /* FONT */
+  --primaryFam: "Iceland", cursive;
+  --primaryFSize: 15vw;
+  --secondaryFSize: 4vw;
+  --thirdFSize: 2vw;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  height: 100vh;
+  background-color: var(--primaryC);
+  font-family: var(--primaryFam);
+}
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 70%;
+  width: 60%;
+  padding: 1em;
+  background-color: var(--secondaryC);
+  border: 15px solid #fff;
+}
+
+/* COUNTER */
+.counter_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 15%;
+  background-color: var(--fifthC);
+}
+
+.counter_div h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--secondaryFSize);
+  width: 100%;
+}
+
+/* NUMBER */
+.numDisplay_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 70%;
+  font-size: var(--primaryFSize);
+  background-color: #fff;
+}
+
+/* BUTTONS */
+.button_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 25%;
+  background-color: var(--fifthC);
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  margin: 0.7em;
+  width: 5em;
+  height: 50%;
+  font-family: var(--primaryFam);
+  font-size: var(--thirdFSize);
+  transition: 0.2s ease;
+}
+
+button:hover {
+  box-shadow: 3px 3px 3px #333;
+  background-color: var(--fourthC);
+  transform: scale(1.1);
+}
