@@ -56,3 +56,14 @@ buttonRight.onclick = () => {
   profilePic.style.backgroundImage = values[i].picture;
   testimDiv.innerHTML = values[i].testimony;
 };
+
+buttonLeft.onclick = () => {
+  if (i == -1) {
+    i = 4;
+  } else {
+    i = i - 1;
+  }
+  nameDiv.innerHTML = values[i].name;
+  profilePic.style.backgroundImage = values[i].picture;
+  testimDiv.innerHTML = values[i].testimony;
+};
