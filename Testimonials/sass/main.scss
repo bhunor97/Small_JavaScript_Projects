@@ -1,5 +1,25 @@
+@import "mixins", "values";
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  border: 1px solid black;
+}
+
+body {
+  @include felxCentCol;
+  height: 100vh;
+}
+
+// SECTION_1
+.section_1 {
+  @include felxCentCol;
+  width: auto;
+  height: auto;
+  padding: 1em;
+  h1,
+  h3 {
+    margin: 0.3em;
+  }
 }
