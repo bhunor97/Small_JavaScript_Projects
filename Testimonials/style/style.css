@@ -11,6 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: lightblue;
 }
 
 .section_1 {
@@ -21,10 +22,67 @@ body {
   width: auto;
   height: auto;
   padding: 1em;
+  margin: 2rem;
 }
 .section_1 h1,
 .section_1 h3 {
-  margin: 0.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0.3rem;
+}
+
+.section_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  height: 70%;
+}
+.section_2 .buttonLeft {
+  position: absolute;
+  left: 0;
+}
+.section_2 .buttonRight {
+  position: absolute;
+  right: 0;
+}
+
+.buttonLeft,
+.buttonRight {
+  padding: 1em;
+}
+
+.containerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 70%;
+  padding: 1em;
+}
+.containerDiv .pictureDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 10%;
+  position: absolute;
+  top: 10%;
+}
+.containerDiv .nameDiv,
+.containerDiv .ratingDiv,
+.containerDiv .testimDiv,
+.containerDiv .commaDiv {
+  margin: 2rem auto;
+  width: auto;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
