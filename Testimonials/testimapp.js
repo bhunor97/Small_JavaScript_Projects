@@ -50,6 +50,9 @@ const entries = Object.entries(peopleObject);
 // console.log(entries);
 
 let i = 0;
+nameDiv.innerHTML = values[i].name;
+profilePic.style.backgroundImage = values[i].picture;
+testimDiv.innerHTML = values[i].testimony;
 
 buttonRight.onclick = () => {
   if (i == 5) {

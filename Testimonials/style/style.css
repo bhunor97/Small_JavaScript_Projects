@@ -4,7 +4,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid white;
 }
 
 body {
@@ -19,7 +18,7 @@ body {
   background-position: center;
   background-size: cover;
   font-family: "Chivo", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.5;
 }
 
 .section_1 {
@@ -30,7 +29,7 @@ body {
   width: auto;
   height: auto;
   padding: 1em;
-  margin: 2rem;
+  margin-bottom: auto;
 }
 .section_1 h1,
 .section_1 h3 {
@@ -42,10 +41,10 @@ body {
   margin: 0.3rem;
 }
 .section_1 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .section_1 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5;
 }
 
 .section_2 {
@@ -54,7 +53,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 70%;
+  width: auto;
   height: 70%;
 }
 .section_2 .buttonLeft {
@@ -69,6 +68,12 @@ body {
 .buttonLeft,
 .buttonRight {
   padding: 1em;
+  transition: 0.2s ease;
+}
+.buttonLeft:hover,
+.buttonRight:hover {
+  background-color: #078c5b;
+  color: #fff;
 }
 
 .containerDiv {
@@ -89,6 +94,7 @@ body {
   height: 20%;
   position: absolute;
   top: 0%;
+  margin: auto;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -98,6 +104,9 @@ body {
 .containerDiv .testimDiv,
 .containerDiv .commaDiv {
   margin: auto;
+}
+.containerDiv .ratingDiv {
+  padding: 1em;
 }
 .containerDiv .testimDiv {
   display: flex;
@@ -112,8 +121,13 @@ body {
 .containerDiv .nameDiv {
   position: absolute;
   top: -10%;
+  font-size: 2rem;
 }
 .containerDiv .testimDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 50%;
   font-family: "Overpass", sans-serif;
   background-color: #052613;
@@ -123,11 +137,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30%;
-  width: 30%;
+  height: auto;
 }
 .containerDiv .commaDiv i.material-icons {
-  font-size: 3em;
+  font-size: 4em;
 }
 
 /*# sourceMappingURL=style.css.map */

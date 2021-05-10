@@ -6,7 +6,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid white;
+  // border: 1px solid white;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
   width: auto;
   height: auto;
   padding: 1em;
-  margin: 2rem;
+  margin-bottom: auto;
   h1,
   h3 {
     @include felxCentCol;
@@ -35,7 +35,7 @@ body {
     margin: 0.3rem;
   }
   h1 {
-    font-size: $fonSizeBig;
+    font-size: $fontSizeBig;
   }
   h3 {
     font-size: $fontSizeMedium;
@@ -46,7 +46,7 @@ body {
 .section_2 {
   @include felxCentCol;
   position: relative;
-  width: 70%;
+  width: auto;
   height: 70%;
 
   //   BUTTONS
@@ -63,6 +63,11 @@ body {
 .buttonLeft,
 .buttonRight {
   padding: 1em;
+  transition: 0.2s ease;
+  &:hover {
+    background-color: $color4;
+    color: #fff;
+  }
 }
 
 // INNER CONTAINER
@@ -72,24 +77,30 @@ body {
   height: 70%;
   padding: 1em;
 
-  //   PICTURE
+  // PICTURE
   .pictureDiv {
     @include felxCentCol;
     width: 30%;
     height: 20%;
     position: absolute;
     top: 0%;
+    margin: auto;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
   }
-  //    ELEMENTS STRUCTURE
+
+  // ELEMENTS STRUCTURE
   .nameDiv,
   .ratingDiv,
   .testimDiv,
   .commaDiv {
     margin: auto;
   }
+  .ratingDiv {
+    padding: 1em;
+  }
+
   .testimDiv {
     @include felxCentCol;
     text-align: center;
@@ -101,9 +112,11 @@ body {
   .nameDiv {
     position: absolute;
     top: -10%;
+    font-size: $fontSizeBig;
   }
 
   .testimDiv {
+    @include felxCentCol;
     height: 50%;
     font-family: $fontType2;
     background-color: $color3;
@@ -111,10 +124,9 @@ body {
 
   .commaDiv {
     @include felxCentCol;
-    height: 30%;
-    width: 30%;
+    height: auto;
     i.material-icons {
-      font-size: 3em;
+      font-size: 4em;
     }
   }
 }
