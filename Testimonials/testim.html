@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Testimonials</title>
     <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
     <section class="section_1">
@@ -14,15 +18,29 @@
     </section>
     <section class="section_2">
       <div class="containerDiv">
-        <div id="pictureDiv" class="pictureDiv">Pic here</div>
+        <div id="pictureDiv" class="pictureDiv"></div>
         <div id="nameDiv" class="nameDiv">Name here</div>
-        <div id="ratingDiv" class="ratingDiv">Stars here</div>
+        <div id="ratingDiv" class="ratingDiv">
+          <span class="material-icons-outlined">
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star_half</i>
+          </span>
+        </div>
         <div id="testimDiv" class="testimDiv">Testimonials here</div>
-        <div class="commaDiv">Comma here</div>
+        <div class="commaDiv">
+          <i class="material-icons">format_quote</i>
+        </div>
       </div>
 
-      <button id="buttonLeft" class="buttonLeft">Left</button>
-      <button id="buttonRight" class="buttonRight">Right</button>
+      <button id="buttonLeft" class="buttonLeft">
+        <i class="material-icons">arrow_back_ios</i>
+      </button>
+      <button id="buttonRight" class="buttonRight">
+        <i class="material-icons">arrow_forward_ios</i>
+      </button>
     </section>
     <script src="testimapp.js"></script>
   </body>

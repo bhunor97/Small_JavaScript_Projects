@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@700&family=Overpass:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 body {
@@ -11,7 +13,13 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: lightblue;
+  background-image: url(https://images.pexels.com/photos/3838850/pexels-photo-3838850.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Chivo", sans-serif;
+  font-size: 1.5rem;
 }
 
 .section_1 {
@@ -33,6 +41,12 @@ body {
   width: 100%;
   margin: 0.3rem;
 }
+.section_1 h1 {
+  font-size: 2.5rem;
+}
+.section_1 h3 {
+  font-size: 1.5rem;
+}
 
 .section_2 {
   display: flex;
@@ -40,7 +54,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 80%;
+  width: 70%;
   height: 70%;
 }
 .section_2 .buttonLeft {
@@ -62,7 +76,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 90%;
   height: 70%;
   padding: 1em;
 }
@@ -71,10 +85,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 10%;
+  width: 30%;
+  height: 20%;
   position: absolute;
-  top: 10%;
+  top: 0%;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -83,7 +97,7 @@ body {
 .containerDiv .ratingDiv,
 .containerDiv .testimDiv,
 .containerDiv .commaDiv {
-  margin: 2rem auto;
+  margin: auto;
 }
 .containerDiv .testimDiv {
   display: flex;
@@ -94,6 +108,26 @@ body {
   padding: 0.5em;
   margin: auto;
   height: 20%;
+}
+.containerDiv .nameDiv {
+  position: absolute;
+  top: -10%;
+}
+.containerDiv .testimDiv {
+  height: 50%;
+  font-family: "Overpass", sans-serif;
+  background-color: #052613;
+}
+.containerDiv .commaDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 30%;
+}
+.containerDiv .commaDiv i.material-icons {
+  font-size: 3em;
 }
 
 /*# sourceMappingURL=style.css.map */
