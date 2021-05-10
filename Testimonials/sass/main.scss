@@ -65,6 +65,9 @@ body {
     height: 10%;
     position: absolute;
     top: 10%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
   }
   //    ELEMENTS STRUCTURE
   .nameDiv,
@@ -72,7 +75,12 @@ body {
   .testimDiv,
   .commaDiv {
     margin: 2rem auto;
-    width: auto;
-    height: auto;
+  }
+  .testimDiv {
+    @include felxCentCol;
+    text-align: center;
+    padding: 0.5em;
+    margin: auto;
+    height: 20%;
   }
 }
