@@ -17,9 +17,10 @@ body {
 .container {
   width: 70%;
   height: 80%;
-  padding: 0.5em;
+  padding: 1em;
   background-color: lightgreen;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   border: 3px solid black;
 }
 
@@ -27,7 +28,7 @@ body {
 .display {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   width: 100%;
   height: 20%;
   padding: 1em;
@@ -57,10 +58,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
 
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 600;
   font-family: monospace;
   background-color: lightblue;
@@ -78,11 +79,12 @@ body {
   background-color: red;
 }
 
-.C {
+.clear {
   background-color: green;
 }
 
 .calcButton:hover {
   background-color: lightseagreen;
   color: #fff;
+  cursor: pointer;
 }
