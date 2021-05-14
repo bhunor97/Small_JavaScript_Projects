@@ -13,6 +13,10 @@ function pushButton() {
       display.innerHTML = valuesText;
     };
   }
+  const clearButton = values[16];
+  clearButton.onclick = () => {
+    display.innerHTML = "";
+  };
 }
 
 console.log(pushButton());
