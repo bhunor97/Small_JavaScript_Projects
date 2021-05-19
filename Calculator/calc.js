@@ -16,7 +16,7 @@ function pushButton() {
       if (display.innerHTML == "") {
         display.innerHTML = valuesText;
       } else {
-        display.innerHTML = parseInt(display.innerHTML) + valuesText;
+        display.innerHTML = display.innerHTML + valuesText;
       }
       // console.log(display.innerHTML);
     };
@@ -31,17 +31,65 @@ function pushButton() {
   // MULTIPLY
   const asterisk = buttonValues[0];
   asterisk.onclick = () => {
-    number = parseInt(display.innerHTML);
-    display.innerHTML = "";
+    if (display.innerHTML.includes(".")) {
+      number = parseFloat(display.innerHTML);
+      display.innerHTML = "";
+    } else {
+      number = parseInt(display.innerHTML);
+      display.innerHTML = "";
+    }
     operator = 1;
   };
 
   // DIVIDE
   const divide = buttonValues[1];
   divide.onclick = () => {
-    number = parseInt(display.innerHTML);
-    display.innerHTML = "";
+    if (display.innerHTML.includes(".")) {
+      number = parseFloat(display.innerHTML);
+      display.innerHTML = "";
+    } else {
+      number = parseInt(display.innerHTML);
+      display.innerHTML = "";
+    }
     operator = 2;
+  };
+
+  // SUBTRACT
+  const subtract = buttonValues[2];
+  subtract.onclick = () => {
+    if (display.innerHTML.includes(".")) {
+      number = parseFloat(display.innerHTML);
+      display.innerHTML = "";
+    } else {
+      number = parseInt(display.innerHTML);
+      display.innerHTML = "";
+    }
+    operator = 3;
+  };
+
+  // ADD
+  const add = buttonValues[3];
+  add.onclick = () => {
+    if (display.innerHTML.includes(".")) {
+      number = parseFloat(display.innerHTML);
+      display.innerHTML = "";
+    } else {
+      number = parseInt(display.innerHTML);
+      display.innerHTML = "";
+    }
+    operator = 4;
+  };
+
+  // DECIMAL POINT
+  const decimalPoint = buttonValues[4];
+  decimalPoint.onclick = () => {
+    if (display.innerHTML.includes(".")) {
+      display.innerHTML;
+    } else if (display.innerHTML == "") {
+      display.innerHTML;
+    } else {
+      display.innerHTML = `${display.innerHTML}.`;
+    }
   };
 
   // EQUAL
@@ -51,10 +99,20 @@ function pushButton() {
     if (operator == 1) {
       display.innerHTML = display.innerHTML * number;
     }
+
     // division
     else if (operator == 2) {
       display.innerHTML = number / display.innerHTML;
-      console.log(display.innerHTML);
+    }
+
+    // subtraction
+    else if (operator == 3) {
+      display.innerHTML = number - display.innerHTML;
+    }
+
+    // addition
+    else if (operator == 4) {
+      display.innerHTML = number + parseInt(display.innerHTML);
     }
   };
 }
