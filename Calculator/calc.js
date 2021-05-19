@@ -112,7 +112,7 @@ function pushButton() {
 
     // addition
     else if (operator == 4) {
-      display.innerHTML = number + parseInt(display.innerHTML);
+      display.innerHTML = number + parseFloat(display.innerHTML);
     }
   };
 }
