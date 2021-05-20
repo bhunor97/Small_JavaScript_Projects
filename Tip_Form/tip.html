@@ -11,11 +11,16 @@
     <!-- CONTAINER -->
     <section class="container">
       <!-- TITLE -->
-      <div class="title">
-        <h2>Tip Calculator</h2>
+      <div class="title_div">
+        <h3>Tip Calculator</h3>
+      </div>
+      <!-- ERROR DISPLAY -->
+      <div id="errorDisplay" class="error_div">
+        Bill Amount Cannot Be Blank Number Of Users Must Be Greater Than Zero
+        You Must Select A Service
       </div>
       <!-- FORM -->
-      <form action="">
+      <form class="form" action="">
         <div class="how_much_div">
           <label for="howMuch">How Much Was Your Bill?</label>
           <input type="number" step="0.1" name="price" id="howMuch" />
@@ -32,15 +37,31 @@
             <option id="good_10" value="good">Good - 10%</option>
             <option id="bad_2" value="bad">Bad - 2%</option>
           </select>
-          <!-- BUTTON -->
-          <div class="button_div">
-            <button type="submit" class="calculate_button" id="calcButton">
-              Calculate
-            </button>
-          </div>
+        </div>
+        <!-- BUTTON -->
+        <div class="button_div">
+          <button type="submit" class="calculate_button" id="calcButton">
+            Calculate
+          </button>
+        </div>
+        <!-- RESULTS DISPLAY-->
+        <div id="resultsDisplayDiv" class="results_display_div">
+          <div id="tipAmountDiv" class="tip_div">Tip Amount $ 24.60</div>
+          <div id="totalAmountDiv" class="total_div">Total Amount $ 147.60</div>
+          <div id="eachOwesDiv" class="owes_div">Each Person Owes $ 1.20</div>
         </div>
       </form>
     </section>
     <script src="tip.js"></script>
   </body>
 </html>
+
+<!-- 
+Tip Amount $ 24.60
+Total Amount $ 147.60
+Each Person Owes $ 1.20 
+
+Bill Amount Cannot Be Blank
+Number Of Users Must Be Greater Than Zero
+You Must Select A Service
+-->
