@@ -39,7 +39,7 @@ body {
 /* ERROR DIV */
 .error_div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -50,6 +50,10 @@ body {
 
   background-color: lightcoral;
   color: white;
+}
+
+.error_div p {
+  padding: 0.2em;
 }
 
 /* FORM */
