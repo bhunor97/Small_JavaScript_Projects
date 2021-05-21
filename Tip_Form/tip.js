@@ -3,7 +3,6 @@ const howMuch = document.getElementById("howMuch");
 const howMany = document.getElementById("howMany");
 // dropdown
 const selectList = document.getElementById("serviceList");
-
 // button
 const calcButton = document.getElementById("calcButton");
 // error display
@@ -25,6 +24,9 @@ calcButton.onclick = () => {
     // total display
     let total20Sum = parseInt(tip20) + parseInt(howMuch.value);
     totalDisp.innerHTML = "Total Amount $ " + total20Sum;
+    // each owes
+    let people = parseInt(howMany.value);
+    eachOwesDisp.innerHTML = "Each Person Owes $ " + total20Sum / people;
     // 10% ---
   } else if (
     selectList.options[selectList.selectedIndex].text == "Good - 10%"
@@ -35,6 +37,9 @@ calcButton.onclick = () => {
     // total display
     let total10Sum = parseInt(tip10) + parseInt(howMuch.value);
     totalDisp.innerHTML = "Total Amount $ " + total10Sum;
+    // each owes
+    let people = parseInt(howMany.value);
+    eachOwesDisp.innerHTML = "Each Person Owes $ " + total10Sum / people;
     // 2% ---
   } else if (selectList.options[selectList.selectedIndex].text == "Bad - 2%") {
     // tip display
@@ -43,6 +48,9 @@ calcButton.onclick = () => {
     // total display
     let total2Sum = parseInt(tip2) + parseInt(howMuch.value);
     totalDisp.innerHTML = "Total Amount $ " + total2Sum;
+    // each owes
+    let people = parseInt(howMany.value);
+    eachOwesDisp.innerHTML = "Each Person Owes $ " + total2Sum / people;
   }
 
   // ERROR DISPLAY
@@ -58,10 +66,10 @@ calcButton.onclick = () => {
   }
 };
 
-// $10 --> price
-// 2ppl --> people
-// good-10perc --> option
+// $100 --> price
+// 5ppl --> people
+// great-20perc --> percent
 
-// Tip Amount $ 1.00 -->  Math.round((price/ option.value) * 100)
-// Total Amount $ 11.00 --> price + tip
-// Each Person Owes $ 5.50 --> (price + tip) / people
+// Tip  $ 20.00 --> (Tip / price) * 100
+// Total  $ 120.00 --> Tip + price
+// Each Person Owes $ 24.00 --> total / people
