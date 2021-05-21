@@ -13,7 +13,7 @@ const resultsDiv = document.getElementById("resultsDisplayDiv");
 const tipDisp = document.getElementById("tipAmountDiv");
 const totalDisp = document.getElementById("totalAmountDiv");
 const eachOwesDisp = document.getElementById("eachOwesDiv");
-resultsDiv.style.display = "block";
+resultsDiv.style.display = "none";
 
 calcButton.onclick = () => {
   // 20% ---
@@ -53,13 +53,18 @@ calcButton.onclick = () => {
     eachOwesDisp.innerHTML = "Each Person Owes $ " + total2Sum / people;
   }
 
-  // ERROR DISPLAY
+  // ERROR DISPLAY / RESULT DISPLAY
   if (
     howMuch.value == "" ||
     howMany.value == "" ||
     selectList.options[selectList.selectedIndex].text == "Choose..."
   ) {
     errorDisp.style.display = "block";
+    setTimeout(() => {
+      errorDisp.style.display = "none";
+    }, 3000);
+  } else {
+    resultsDiv.style.display = "block";
     setTimeout(() => {
       errorDisp.style.display = "none";
     }, 3000);
