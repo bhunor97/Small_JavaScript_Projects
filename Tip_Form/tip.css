@@ -5,6 +5,15 @@
   /* border: 1px solid black; */
 }
 
+:root {
+  /* COLORS */
+  --color1: #b7e1ff;
+  --color2: #366180;
+  --color3: #6bc1ff;
+  --color4: #5c7180;
+  --color5: #93b4cc;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -24,6 +33,7 @@ body {
 
   padding: 1rem;
   border: 1px solid black;
+  background-color: var(--color2);
 }
 
 /* TITLE */
@@ -32,8 +42,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 2.5em;
+  color: #fff;
+  background-color: var(--color4);
 }
 
 /* ERROR DIV */
@@ -43,12 +55,12 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 90%;
+  width: 100%;
 
   padding: 1em;
   margin: 0.5em;
 
-  background-color: lightcoral;
+  background-color: red;
   color: white;
 }
 
@@ -62,8 +74,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 80%;
+  padding: 0.5rem;
+  background-color: var(--color1);
 }
 
 .form div {
@@ -83,7 +97,7 @@ body {
   align-self: flex-start;
   justify-content: center;
   width: 100%;
-  height: 2em;
+  height: 2.5em;
 }
 
 .form input,
@@ -92,7 +106,7 @@ select {
   flex-direction: row;
   align-self: flex-start;
   width: 100%;
-  height: 2em;
+  height: 2.5em;
 }
 
 /* BUTTON */
@@ -107,12 +121,19 @@ select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  background-color: #333;
+  height: 30%;
+  width: 100%;
+  background-color: green;
 }
 
-.tip_div,
-.total_div,
-.owes_div {
+.results_display_div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
   color: white;
 }
