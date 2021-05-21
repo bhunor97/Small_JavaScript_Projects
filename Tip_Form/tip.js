@@ -11,37 +11,29 @@ const errorDisp = document.getElementById("errorDisplay");
 errorDisp.style.display = "none";
 // result display
 const resultsDiv = document.getElementById("resultsDisplayDiv");
-const amountDisp = document.getElementById("tipAmountDiv");
+const tipDisp = document.getElementById("tipAmountDiv");
 const totalDisp = document.getElementById("totalAmountDiv");
 const eachOwesDisp = document.getElementById("eachOwesDiv");
 resultsDiv.style.display = "block";
 
 calcButton.onclick = () => {
-  // ERROR DISPLAY
+  // TIP AMOUNT
+  if (selectList.options[selectList.selectedIndex].text == "Great - 20%") {
+    tipDisp.innerHTML =
+      "Tip Amount $ " + ((20 / parseInt(howMuch.value)) * 100).toFixed(2);
+  }
   if (
     howMuch.value == "" ||
     howMany.value == "" ||
     selectList.options[selectList.selectedIndex].text == "Choose..."
   ) {
+    // ERROR DISPLAY
     errorDisp.style.display = "block";
     setTimeout(() => {
       errorDisp.style.display = "none";
     }, 3000);
   }
-  // if (selectList.options[selectList.selectedIndex].text == "Choose...") {
-  //   errorDisp.style.display = "block";
-  // } else {
-  //   errorDisp.style.display = "none";
-  // }
 };
-
-// selectList.addEventListener("change", () => {
-//   if (selectList.options[selectList.selectedIndex].text == "Choose...") {
-//     console.log("yey");
-//   } else {
-//     console.log(selectList.options[selectList.selectedIndex].text);
-//   }
-// });
 
 // $10 --> price
 // 2ppl --> people
