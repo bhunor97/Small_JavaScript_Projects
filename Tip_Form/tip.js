@@ -17,17 +17,40 @@ const eachOwesDisp = document.getElementById("eachOwesDiv");
 resultsDiv.style.display = "block";
 
 calcButton.onclick = () => {
-  // TIP AMOUNT
+  // 20% ---
   if (selectList.options[selectList.selectedIndex].text == "Great - 20%") {
-    tipDisp.innerHTML =
-      "Tip Amount $ " + ((20 / parseInt(howMuch.value)) * 100).toFixed(2);
+    let tip20 = ((20 / parseInt(howMuch.value)) * 100).toFixed(2);
+    // tip display
+    tipDisp.innerHTML = "Tip Amount $ " + tip20;
+    // total display
+    let total20Sum = parseInt(tip20) + parseInt(howMuch.value);
+    totalDisp.innerHTML = "Total Amount $ " + total20Sum;
+    // 10% ---
+  } else if (
+    selectList.options[selectList.selectedIndex].text == "Good - 10%"
+  ) {
+    // tip display
+    let tip10 = ((10 / parseInt(howMuch.value)) * 100).toFixed(2);
+    tipDisp.innerHTML = "Tip Amount $ " + tip10;
+    // total display
+    let total10Sum = parseInt(tip10) + parseInt(howMuch.value);
+    totalDisp.innerHTML = "Total Amount $ " + total10Sum;
+    // 2% ---
+  } else if (selectList.options[selectList.selectedIndex].text == "Bad - 2%") {
+    // tip display
+    let tip2 = ((2 / parseInt(howMuch.value)) * 100).toFixed(2);
+    tipDisp.innerHTML = "Tip Amount $ " + tip2;
+    // total display
+    let total2Sum = parseInt(tip2) + parseInt(howMuch.value);
+    totalDisp.innerHTML = "Total Amount $ " + total2Sum;
   }
+
+  // ERROR DISPLAY
   if (
     howMuch.value == "" ||
     howMany.value == "" ||
     selectList.options[selectList.selectedIndex].text == "Choose..."
   ) {
-    // ERROR DISPLAY
     errorDisp.style.display = "block";
     setTimeout(() => {
       errorDisp.style.display = "none";
