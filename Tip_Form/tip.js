@@ -18,15 +18,16 @@ resultsDiv.style.display = "none";
 calcButton.onclick = () => {
   // 20% ---
   if (selectList.options[selectList.selectedIndex].text == "Great - 20%") {
-    let tip20 = ((20 / parseInt(howMuch.value)) * 100).toFixed(2);
     // tip display
+    let tip20 = ((20 / parseInt(howMuch.value)) * 100).toFixed(2);
     tipDisp.innerHTML = "Tip Amount $ " + tip20;
     // total display
     let total20Sum = parseInt(tip20) + parseInt(howMuch.value);
     totalDisp.innerHTML = "Total Amount $ " + total20Sum;
     // each owes
     let people = parseInt(howMany.value);
-    eachOwesDisp.innerHTML = "Each Person Owes $ " + total20Sum / people;
+    eachOwesDisp.innerHTML =
+      "Each Person Owes $ " + (total20Sum / people).toFixed(2);
     // 10% ---
   } else if (
     selectList.options[selectList.selectedIndex].text == "Good - 10%"
@@ -39,7 +40,8 @@ calcButton.onclick = () => {
     totalDisp.innerHTML = "Total Amount $ " + total10Sum;
     // each owes
     let people = parseInt(howMany.value);
-    eachOwesDisp.innerHTML = "Each Person Owes $ " + total10Sum / people;
+    eachOwesDisp.innerHTML =
+      "Each Person Owes $ " + (total10Sum / people).toFixed(2);
     // 2% ---
   } else if (selectList.options[selectList.selectedIndex].text == "Bad - 2%") {
     // tip display
@@ -50,7 +52,8 @@ calcButton.onclick = () => {
     totalDisp.innerHTML = "Total Amount $ " + total2Sum;
     // each owes
     let people = parseInt(howMany.value);
-    eachOwesDisp.innerHTML = "Each Person Owes $ " + total2Sum / people;
+    eachOwesDisp.innerHTML =
+      "Each Person Owes $ " + (total2Sum / people).toFixed(2);
   }
 
   // ERROR DISPLAY / RESULT DISPLAY
@@ -66,7 +69,7 @@ calcButton.onclick = () => {
   } else {
     resultsDiv.style.display = "block";
     setTimeout(() => {
-      errorDisp.style.display = "none";
+      resultsDiv.style.display = "none";
     }, 3000);
   }
 };
@@ -78,3 +81,6 @@ calcButton.onclick = () => {
 // Tip  $ 20.00 --> (Tip / price) * 100
 // Total  $ 120.00 --> Tip + price
 // Each Person Owes $ 24.00 --> total / people
+
+// TO DO:
+// error message if negative number is entered
