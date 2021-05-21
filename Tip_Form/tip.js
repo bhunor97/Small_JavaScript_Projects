@@ -72,6 +72,6 @@ calcButton.onclick = () => {
     resultsDiv.style.display = "block";
     setTimeout(() => {
       resultsDiv.style.display = "none";
-    }, 10000);
+    }, 5000);
   }
 };
