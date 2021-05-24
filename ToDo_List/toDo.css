@@ -2,4 +2,83 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  border: 1px solid black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: lightslategray;
+  color: white;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 70%; /* change to auto */
+  width: 70%;
+}
+
+/* TITLE */
+.titleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 2rem;
+}
+
+/* INPUT */
+.inputDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.addButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+
+.inputText {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+/* OUTPUT */
+.outputDiv {
+  width: 80%;
+  height: auto;
+}
+
+/* CLEAR BUTTON */
+.clearButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+/* ALL */
+.clearButton,
+.titleDiv,
+.addButton,
+.inputText {
+  height: 2em;
 }
