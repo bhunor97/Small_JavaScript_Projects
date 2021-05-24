@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 body {
@@ -21,8 +21,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 70%; /* change to auto */
-  width: 70%;
+  height: auto; /* change to auto */
+  width: 50%;
+  background-color: lightseagreen;
+}
+
+.clearButton,
+.titleDiv,
+.addButton,
+.inputText {
+  height: 3em;
 }
 
 /* TITLE */
@@ -32,7 +40,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 80%;
-  margin: 2rem;
+  margin: 5rem;
+  background-color: lightslategray;
 }
 
 /* ALERT */
@@ -44,6 +53,7 @@ body {
   text-align: center;
   width: 80%;
   height: 3em;
+  margin-bottom: 3rem;
   background-color: red;
 }
 
@@ -85,6 +95,66 @@ body {
   justify-content: space-between;
   width: 80%;
   height: auto;
+  margin-top: 2rem;
+}
+
+.newOutputDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  color: #000;
+  width: 70%;
+  padding: 1rem;
+}
+
+.newDelButt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  color: white;
+  width: 15%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+}
+
+.newDelButt:hover {
+  cursor: pointer;
+}
+
+.newEditButt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  color: white;
+  width: 15%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+}
+
+.newEditButt:hover {
+  cursor: pointer;
+}
+
+.newOutputDiv,
+.newDelButt,
+.newEditButt {
+  height: 1.5rem;
+}
+
+.outputContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* CLEAR BUTTON */
@@ -94,16 +164,10 @@ body {
   align-items: center;
   justify-content: center;
   margin: 2rem;
+  padding: 1em;
+  background-color: lightsalmon;
 }
 
 .clearButton:hover {
   cursor: pointer;
-}
-
-/* ALL */
-.clearButton,
-.titleDiv,
-.addButton,
-.inputText {
-  height: 3em;
 }
