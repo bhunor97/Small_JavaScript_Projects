@@ -6,24 +6,8 @@ const clearButton = document.getElementById("clearButton");
 const errorDiv = document.getElementById("errorDiv");
 errorDiv.style.display = "none";
 
-// addButton.onclick = () => {
-//   if (!inputText.value == "") {
-//     let newDiv = document.createElement("div");
-//     let textNode = document.createTextNode(inputText.value);
-//     newDiv.appendChild(textNode);
-//     outputDiv.appendChild(newDiv);
-
-//     newDiv.insertAdjacentHTML("afterend", "EDIT");
-//     newDiv.insertAdjacentHTML("afterend", "DELETE ");
-//     inputText.value = "";
-//     console.log(outputDiv);
-//   } else {
-//     errorDiv.style.display = "flex";
-//     setTimeout(() => {
-//       errorDiv.style.display = "none";
-//     }, 2000);
-//   }
-// };
+const listCleared = document.getElementById("clearDiv");
+listCleared.style.display = "none";
 
 addButton.onclick = () => {
   if (!inputText.value == "") {
@@ -48,7 +32,8 @@ addButton.onclick = () => {
     outputContainer.appendChild(newEditButton);
 
     inputText.value = "";
-    console.log(outputDiv);
+    // console.log(outputDiv);
+    // console.log(outputContainer);
   } else {
     errorDiv.style.display = "flex";
     setTimeout(() => {
@@ -57,6 +42,19 @@ addButton.onclick = () => {
   }
 };
 
+// DELETE
+outputDiv.addEventListener("click", (event) => {
+  if (event.target.className === "newDelButt") {
+    outputDiv.removeChild(event.target.parentNode);
+    console.log(event.target);
+  }
+});
+
+// CLEAR
 clearButton.onclick = () => {
   outputDiv.innerHTML = "";
+  listCleared.style.display = "flex";
+  setTimeout(() => {
+    listCleared.style.display = "none";
+  }, 2000);
 };
