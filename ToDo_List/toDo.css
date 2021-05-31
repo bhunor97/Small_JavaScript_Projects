@@ -5,6 +5,13 @@
   /* border: 1px solid black; */
 }
 
+:root {
+  /* FONT - not used yet*/
+  --fontSmall: 0.8rem;
+  --fontMedium: 1.2rem;
+  --fontBig: 2rem;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -54,6 +61,7 @@ body {
   width: 80%;
   height: 3em;
   margin-bottom: 1rem;
+  padding: 1em;
   background-color: green;
 }
 
@@ -66,7 +74,8 @@ body {
   text-align: center;
   width: 80%;
   height: 3em;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  padding: 1em;
   background-color: red;
 }
 
