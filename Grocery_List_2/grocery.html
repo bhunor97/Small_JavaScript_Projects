@@ -9,23 +9,34 @@
   </head>
   <body>
     <section class="container">
-      <!-- INPUT BOX-->
+      <!-- INPUT DIV-->
       <div class="inputDiv">
         <div class="titleDiv">Add Grocery Items</div>
-        <input
-          type="text"
-          name=""
-          id="addItemsInput"
-          class="addItemsInput"
-          placeholder="Add Items To The List"
-        />
-        <div class="buttonDiv_1">
-          <button id="submitButt" class="submitButt">Submit Here</button>
-        </div>
+        <!-- alerts div -->
+        <div id="alertsDiv" class="alertsDiv"></div>
+        <!-- form -->
+        <form class="form" id="form" action="">
+          <input
+            type="text"
+            name=""
+            id="addItemsInput"
+            class="addItemsInput"
+            placeholder="Add Items To The List"
+          />
+          <div class="buttonDiv_1">
+            <!-- submit button -->
+            <button type="button" id="submitButt" class="submitButt">
+              Submit Here
+            </button>
+          </div>
+        </form>
       </div>
-      <!-- OUTPUT BOX -->
+      <!-- OUTPUT DIV -->
       <div class="outputDiv">
         <div class="titleDiv">Grocery Items</div>
+        <!-- items div -->
+        <div id="itemsDiv" class="itemsDiv"></div>
+        <!-- clear button -->
         <div class="buttonDiv_2">
           <button id="clearButt" class="clearButt">Clear Items</button>
         </div>

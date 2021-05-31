@@ -2,7 +2,7 @@
   margin: 0;
   pad: 0;
   box-sizing: border-box;
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 body {
@@ -10,7 +10,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   height: auto;
   background-color: lightseagreen;
 }
@@ -21,10 +20,36 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
   height: auto;
   width: 50%;
   border: 1px solid black;
+  margin-top: 2rem;
+}
+
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin-bottom: 0.5rem;
+}
+
+/* ALERTS DIV */
+.alertsDiv {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+}
+
+.alertAdded {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
 }
 
 /* INPUT / OUTPUT DIV */
@@ -53,19 +78,17 @@ body {
   align-items: center;
   justify-content: center;
   width: 80%;
-
-  padding: 0.5rem;
-  margin: 1rem;
+  padding: 1rem;
+  margin: 0.5rem auto 0 auto;
 }
 
-/* INPUT */
+/* INPUT BAR*/
 .addItemsInput {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 80%;
-
   padding: 0.5rem;
   margin: 1.5rem;
 }
@@ -89,4 +112,27 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
+}
+
+/* ITEMS DIV */
+.itemsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  margin: 1rem;
+}
+
+/* newItems */
+.newLi {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  width: 100%;
+  margin: auto;
 }
