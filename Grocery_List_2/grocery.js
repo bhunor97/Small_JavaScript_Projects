@@ -5,6 +5,7 @@ const itemsDiv = document.getElementById("itemsDiv");
 const alertsDiv = document.getElementById("alertsDiv");
 const outputAlertDiv = document.getElementById("outputAlertDiv");
 
+// alert elements
 const alertAdded = document.createElement("div");
 alertAdded.className = "alertAdded";
 alertAdded.innerHTML = inputBar.innerHTML + "Item Added To The List";
@@ -26,19 +27,38 @@ alertCleared.style.color = "white";
 // SUBMIT BUTTON
 submitButt.onclick = () => {
   if (!inputBar.value == "") {
+    // single item secton
+    const itemSection = document.createElement("section");
+    itemSection.className = "itemSection";
+    itemsDiv.appendChild(itemSection);
+
     // newLi
     let newLi = document.createElement("li");
     newLi.className = "newLi";
     newLi.innerHTML = inputBar.value;
-    itemsDiv.appendChild(newLi);
-    inputBar.value = "";
+    itemSection.appendChild(newLi);
 
-    alertAddFunc();
+    // delete
+    const deleteDiv = document.createElement("div");
+    deleteDiv.innerHTML = "Delete";
+    deleteDiv.className = "deleteDiv";
+    itemSection.appendChild(deleteDiv);
+
+    inputBar.value = "";
+    alertAddedFunc();
+
     console.log(itemsDiv);
   } else {
     alertEmptyFunc();
   }
 };
+
+// DELETE BUTTONS
+itemsDiv.addEventListener("click", (event) => {
+  if (event.target.className === "deleteDiv") {
+    itemsDiv.removeChild(event.target.parentNode);
+  }
+});
 
 // CLEAR BUTTON
 clearButt.onclick = () => {
@@ -48,7 +68,7 @@ clearButt.onclick = () => {
 };
 
 // ALERT FUNCTIONS
-alertAddFunc = () => {
+alertAddedFunc = () => {
   alertsDiv.appendChild(alertAdded);
   setTimeout(function () {
     alertsDiv.removeChild(alertAdded);
