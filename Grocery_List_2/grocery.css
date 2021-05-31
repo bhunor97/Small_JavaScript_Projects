@@ -2,4 +2,91 @@
   margin: 0;
   pad: 0;
   box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: auto;
+  background-color: lightseagreen;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: auto;
+  width: 50%;
+  border: 1px solid black;
+}
+
+/* INPUT / OUTPUT DIV */
+.inputDiv,
+.outputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem;
+  width: 90%;
+}
+
+.inputDiv {
+  background-color: lightgreen;
+}
+
+.outputDiv {
+  background-color: lightblue;
+}
+
+/* TITLES */
+.titleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+/* INPUT */
+.addItemsInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+
+  padding: 0.5rem;
+  margin: 1.5rem;
+}
+
+/* BUTTONS */
+.buttonDiv_1,
+.buttonDiv_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  margin: 1rem;
+}
+
+.submitButt,
+.clearButt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
 }
