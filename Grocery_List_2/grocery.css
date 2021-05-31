@@ -2,7 +2,7 @@
   margin: 0;
   pad: 0;
   box-sizing: border-box;
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 body {
@@ -43,6 +43,7 @@ body {
   justify-content: center;
   width: 80%;
   height: auto;
+  margin-top: 1rem;
 }
 
 .alertAdded {
@@ -169,6 +170,7 @@ body {
   justify-content: center;
   width: 80%;
   height: auto;
+  margin-top: 1rem;
 }
 
 .alertCleared {
