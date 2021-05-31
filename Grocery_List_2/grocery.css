@@ -2,7 +2,7 @@
   margin: 0;
   pad: 0;
   box-sizing: border-box;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 body {
@@ -33,10 +33,10 @@ body {
   align-items: center;
   justify-content: center;
   width: 80%;
-  margin-bottom: 0.5rem;
+  margin: 1rem;
 }
 
-/* ALERTS DIV */
+/* INPUT ALERTS DIV */
 .alertsDiv {
   flex-direction: column;
   align-items: center;
@@ -75,11 +75,11 @@ body {
 }
 
 .inputDiv {
-  background-color: lightgreen;
+  background-color: lightblue;
 }
 
 .outputDiv {
-  background-color: lightblue;
+  background-color: lightslategray;
 }
 
 /* TITLES */
@@ -91,6 +91,8 @@ body {
   width: 80%;
   padding: 1rem;
   margin: 0.5rem auto 0 auto;
+
+  background-color: lightskyblue;
 }
 
 /* INPUT BAR*/
@@ -99,9 +101,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   padding: 0.5rem;
   margin: 1.5rem;
+  outline: none;
 }
 
 /* BUTTONS */
@@ -111,7 +114,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   height: auto;
   margin: 1rem;
 }
@@ -136,6 +139,15 @@ body {
   margin: 1rem;
 }
 
+.outputSubContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 1rem;
+}
+
 /* newItems */
 .newLi {
   display: flex;
@@ -145,5 +157,25 @@ body {
   text-align: center;
   list-style: none;
   width: 100%;
-  margin: auto;
+  margin: 0.5rem;
+  padding: 0.5em;
+  background-color: white;
+}
+
+/* OUTPUT ALERTS DIV */
+.outputAlertDiv {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+}
+
+.alertCleared {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
 }
