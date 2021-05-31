@@ -10,6 +10,12 @@ alertAdded.innerHTML = "Item Added To The List";
 alertAdded.style.backgroundColor = "green";
 alertAdded.style.color = "white";
 
+const alertEmpty = document.createElement("div");
+alertEmpty.className = "alertEmpty";
+alertEmpty.innerHTML = "Add Something To The List!";
+alertEmpty.style.backgroundColor = "red";
+alertEmpty.style.color = "white";
+
 // SUBMIT BUTTON
 submitButt.onclick = () => {
   if (!inputBar.value == "") {
@@ -23,6 +29,7 @@ submitButt.onclick = () => {
     alertAddFunc();
     console.log(itemsDiv);
   } else {
+    alertEmptyFunc();
   }
 };
 
@@ -37,5 +44,12 @@ alertAddFunc = () => {
   alertsDiv.appendChild(alertAdded);
   setTimeout(function () {
     alertsDiv.removeChild(alertAdded);
+  }, 2000);
+};
+
+alertEmptyFunc = () => {
+  alertsDiv.appendChild(alertEmpty);
+  setTimeout(function () {
+    alertsDiv.removeChild(alertEmpty);
   }, 2000);
 };
