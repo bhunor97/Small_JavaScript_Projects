@@ -24,6 +24,8 @@ alertCleared.innerHTML = "List Cleared";
 alertCleared.style.backgroundColor = "green";
 alertCleared.style.color = "white";
 
+let localStorageArray = [];
+
 // SUBMIT BUTTON
 submitButt.onclick = () => {
   if (!inputBar.value == "") {
@@ -44,6 +46,12 @@ submitButt.onclick = () => {
     deleteDiv.className = "deleteDiv";
     itemSection.appendChild(deleteDiv);
 
+    // local storage
+    localStorageArray.push(inputBar.value);
+    localStorage.setItem(
+      "Grocery Item Saved",
+      JSON.stringify(localStorageArray)
+    );
     inputBar.value = "";
     alertAddedFunc();
 
@@ -56,15 +64,31 @@ submitButt.onclick = () => {
 // DELETE BUTTONS
 itemsDiv.addEventListener("click", (event) => {
   if (event.target.className === "deleteDiv") {
+    localFunc(event.target.previousSibling.innerHTML);
     itemsDiv.removeChild(event.target.parentNode);
   }
 });
+
+// LOCAL STORAGE FUNCTION - finished with some help
+localFunc = (value) => {
+  let localGet = localStorage.getItem("Grocery Item Saved");
+  let jsoned = JSON.parse(localGet);
+  for (let i = 0; i < jsoned.length; i++) {
+    if (jsoned[i] == value) {
+      jsoned.splice(i, 1);
+      localStorageArray = jsoned;
+      localStorage.setItem("Grocery Item Saved", JSON.stringify(jsoned));
+      return;
+    }
+  }
+};
 
 // CLEAR BUTTON
 clearButt.onclick = () => {
   inputBar.value = "";
   itemsDiv.innerHTML = "";
   alertClearedFunc();
+  localStorage.clear();
 };
 
 // ALERT FUNCTIONS
