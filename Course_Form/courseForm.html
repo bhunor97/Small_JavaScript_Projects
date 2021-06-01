@@ -13,7 +13,7 @@
       <div class="inputDiv">
         <div class="titleDiv">Get A Free Course</div>
         <!-- FORM -->
-        <form id="formSection" class="formSection" action="#">
+        <form id="formSection" class="formSection">
           <input
             type="text"
             name="name"
@@ -35,11 +35,20 @@
             class="authorInput"
             placeholder="Author"
           />
+          <!-- SUBMIT BUTTON -->
           <div id="buttonDiv" class="buttonDiv">
-            <button id="submitButt" class="submitButt">Submit</button>
+            <button
+              type="submit"
+              value="submit"
+              id="submitButt"
+              class="submitButt"
+            >
+              Submit
+            </button>
           </div>
         </form>
       </div>
+      <!-- OUTPUT DIV -->
       <div id="outputDiv" class="outputDiv">Output Here</div>
     </section>
     <script src="courseForm.js"></script>
