@@ -15,6 +15,10 @@
   --margSmall: 1rem;
   --margMedium: 2rem;
   --margLarge: 3rem;
+
+  /* FONT */
+  --fontLarge: 1.5rem;
+  --fontMedium: 1.2rem;
 }
 
 body {
@@ -33,9 +37,9 @@ body {
   align-items: center;
   justify-content: space-around;
   height: auto;
-  width: 70%;
+  width: 50%;
   background-color: lightsteelblue;
-  border: 2px solid black;
+  border: 5px solid white;
 
   margin: var(--margLarge);
 }
@@ -61,6 +65,7 @@ body {
 
   padding: var(--padSmall);
   margin-top: var(--margSmall);
+  font-size: var(--fontLarge);
 }
 
 /* FORM */
@@ -103,7 +108,29 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  border: none;
+  transition: 0.2s ease-in-out;
   padding: var(--padSmall);
+  margin: var(--margSmall);
+}
+
+.submitButt:hover {
+  background-color: lightgreen;
+}
+
+.clearButt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  transition: 0.2s ease-in-out;
+  padding: var(--padSmall);
+}
+
+.clearButt:hover {
+  background-color: lightcoral;
 }
 
 /* OUTPUT DIV */
@@ -112,8 +139,54 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  border: 1px solid black;
+  width: 50%;
+  /* border: 1px solid black; */
 
   margin: var(--margLarge);
+}
+
+.newSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  margin: var(--margSmall);
+}
+
+/* .newPicDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+} */
+
+.newUl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+}
+
+.newUl li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+
+  background-color: lightslategrey;
+  color: white;
+
+  padding: var(--padSmall);
+  font-size: var(--fontMedium);
+  margin: 0.2rem;
 }
