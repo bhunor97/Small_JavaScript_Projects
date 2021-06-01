@@ -2,4 +2,117 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+:root {
+  /* PADDING */
+  --padSmall: 1rem;
+  --padMedium: 2rem;
+  --padLarge: 3rem;
+
+  /* MARGIN */
+  --margSmall: 1rem;
+  --margMedium: 2rem;
+  --margLarge: 3rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background-color: lightgoldenrodyellow;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: auto;
+  width: 70%;
+  background-color: lightsteelblue;
+  border: 2px solid black;
+
+  margin: var(--margLarge);
+}
+
+/* INPUT DIV */
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 90%;
+}
+
+.titleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  background-color: lightseagreen;
+  color: white;
+
+  padding: var(--padSmall);
+  margin-top: var(--margSmall);
+}
+
+/* FORM */
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+
+  margin: var(--margSmall);
+}
+
+/* INPUT BAR  */
+.nameInput,
+.courseInput,
+.authorInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: var(--padSmall);
+  margin: var(--margSmall);
+}
+
+/* BUTTON */
+.buttonDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.submitButt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: var(--padSmall);
+}
+
+/* OUTPUT DIV */
+.outputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+
+  margin: var(--margLarge);
 }

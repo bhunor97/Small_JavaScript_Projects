@@ -8,6 +8,40 @@
     <link rel="stylesheet" href="courseForm.css" />
   </head>
   <body>
+    <section class="container">
+      <!-- INPUT DIV -->
+      <div class="inputDiv">
+        <div class="titleDiv">Get A Free Course</div>
+        <!-- FORM -->
+        <form id="formSection" class="formSection" action="#">
+          <input
+            type="text"
+            name="name"
+            id="nameInput"
+            class="nameInput"
+            placeholder="Customer Name"
+          />
+          <input
+            type="text"
+            name="course"
+            id="courseInput"
+            class="courseInput"
+            placeholder="Course"
+          />
+          <input
+            type="text"
+            name="author"
+            id="authorInput"
+            class="authorInput"
+            placeholder="Author"
+          />
+          <div id="buttonDiv" class="buttonDiv">
+            <button id="submitButt" class="submitButt">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div id="outputDiv" class="outputDiv">Output Here</div>
+    </section>
     <script src="courseForm.js"></script>
   </body>
 </html>
