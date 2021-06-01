@@ -6,6 +6,7 @@ const submitButt = document.getElementById("submitButt");
 const clearButt = document.getElementById("clearButt");
 const outputDiv = document.getElementById("outputDiv");
 const form = document.getElementById("formSection");
+const alertDiv = document.getElementById("alertDiv");
 
 // ARRAY OF PICTURES
 const picArr = [
@@ -31,29 +32,37 @@ function UI() {}
 
 // createOutput
 UI.prototype.createOutput = function (data) {
-  // new ul with li
-  let newUl = document.createElement("ul");
-  newUl.className = "newUl";
-  newUl.innerHTML = `
+  if (
+    !nameInput.value == "" ||
+    !courseInput.value == "" ||
+    !authorInput.value == ""
+  ) {
+    // new ul with li
+    let newUl = document.createElement("ul");
+    newUl.className = "newUl";
+    newUl.innerHTML = `
   <li>Name: ${data.Name}</li>
   <li>Course: ${data.Course}</li>
   <li>Author: ${data.Author}</li>
   `;
-  // new section
-  let newSection = document.createElement("section");
-  newSection.className = "newSection";
-  // new picture div
-  let newPicDiv = document.createElement("div");
-  newPicDiv.className = "newPicDiv";
-  newPicDiv.style.backgroundImage = picArr[random];
-  // append
-  newSection.appendChild(newPicDiv);
-  newSection.appendChild(newUl);
-  outputDiv.appendChild(newSection);
-  // clear input fields
-  nameInput.value = "";
-  courseInput.value = "";
-  authorInput.value = "";
+    // new section
+    let newSection = document.createElement("section");
+    newSection.className = "newSection";
+    // new picture div
+    let newPicDiv = document.createElement("div");
+    newPicDiv.className = "newPicDiv";
+    newPicDiv.style.backgroundImage = picArr[random];
+    // append
+    newSection.appendChild(newPicDiv);
+    newSection.appendChild(newUl);
+    outputDiv.appendChild(newSection);
+    // clear input fields
+    nameInput.value = "";
+    courseInput.value = "";
+    authorInput.value = "";
+  } else {
+    alertFunc();
+  }
 };
 
 // FORM SUBMIT
@@ -75,4 +84,14 @@ clearButt.onclick = () => {
   courseInput.value = "";
   authorInput.value = "";
   outputDiv.innerHTML = "";
+};
+
+alertFunc = () => {
+  let emptyAlertDiv = document.createElement("div");
+  emptyAlertDiv.innerHTML = "Fill Out The Form Please!";
+  emptyAlertDiv.className = "emptyAlertDiv";
+  alertDiv.appendChild(emptyAlertDiv);
+  setTimeout(function () {
+    alertDiv.removeChild(emptyAlertDiv);
+  }, 2000);
 };
