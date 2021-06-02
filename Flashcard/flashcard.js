@@ -29,29 +29,67 @@ function UI() {}
 // CREATE CARD
 UI.prototype.createCard = (flashcard) => {
   if (!questInput.value == "" || !answInput.value == "") {
+    // dispaly output
+    outputDiv.style.display = "block";
+
     // new section
     const newSection = document.createElement("section");
     newSection.className = "newSection";
     outputDiv.appendChild(newSection);
 
-    // new inner div
-    let newInnerDiv = document.createElement("div");
-    newInnerDiv.className = "newInnerDiv";
-    newInnerDiv.innerHTML = `
-    <li class="questionLi">${flashcard.question}</li>
-    <a class="showHideLink" href="#">Show/Hide Answer</a>
-    <li class="answerLi">${flashcard.answer}</li>
-    `;
-    newSection.appendChild(newInnerDiv);
+    // new question
+    let newQuestLi = document.createElement("li");
+    newQuestLi.className = "newQuestLi";
+    newQuestLi.id = "newQuestLi";
+    newQuestLi.innerHTML = `${flashcard.question}`;
+    newSection.appendChild(newQuestLi);
 
-    // delete button div
+    // new Show / Hide
+    let newLinkLi = document.createElement("li");
+    newLinkLi.className = "newLinkLi";
+    newLinkLi.id = "newLinkId";
+    newLinkLi.innerHTML = `<a href="#">Show/Hide Answer</a>`;
+    newSection.appendChild(newLinkLi);
+
+    // new answer
+    let newAnswLi = document.createElement("li");
+    newAnswLi.className = "newAnswLi";
+    newAnswLi.id = "newAnswLi";
+    newAnswLi.innerHTML = `${flashcard.answer}`;
+    newSection.appendChild(newAnswLi);
+
+    // new buttons DIV
     let newButtDiv = document.createElement("div");
     newButtDiv.className = "newButtDiv";
-    newButtDiv.innerHTML = `
-  <button class="newEditButt">Edit</button>
-  <button class="newDelButt">Delete</button>
-  `;
-    newInnerDiv.appendChild(newButtDiv);
+    newButtDiv.id = "newButtDiv";
+    newSection.appendChild(newButtDiv);
+
+    // new edit button
+    let newEditButt = document.createElement("button");
+    newEditButt.innerHTML = "Edit";
+    newEditButt.className = "newEditButt";
+    newEditButt.id = "newEditButt";
+    newButtDiv.appendChild(newEditButt);
+
+    // new delete button
+    let newDelButt = document.createElement("button");
+    newDelButt.innerHTML = "Delete";
+    newDelButt.className = "newDelButt";
+    newDelButt.id = "newDelButt";
+    newButtDiv.appendChild(newDelButt);
+
+    // LINK CLICK -> ANSWER
+    let link = document.getElementById("newLinkId");
+    let answer = document.getElementById("newAnswLi");
+    answer.style.visibility = "hidden";
+    link.onclick = function () {
+      if (answer.style.visibility == "hidden") {
+        answer.style.visibility = "visible";
+      } else {
+        answer.style.visibility = "hidden";
+      }
+    };
+
     // clear fields
     questInput.value = "";
     answInput.value = "";
@@ -62,8 +100,6 @@ UI.prototype.createCard = (flashcard) => {
 
 // FORM SUBMIT
 form.addEventListener("submit", function (e) {
-  outputDiv.style.display = "block";
-
   const question = questInput.value;
   const answer = answInput.value;
 
