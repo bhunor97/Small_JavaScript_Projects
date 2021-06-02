@@ -79,6 +79,7 @@ body {
   justify-content: center;
   width: 100%;
   background-color: lightseagreen;
+  color: white;
 
   padding: var(--padSmall);
 }
@@ -125,12 +126,11 @@ body {
   align-items: center;
   justify-content: center;
   width: 90%;
-  background-color: red;
+  background-color: lightcoral;
   color: white;
 
   padding: var(--padSmall);
-
-  display: none; /* change this */
+  margin: var(--margSmall);
 }
 
 /* FORM SECTION */
@@ -149,6 +149,7 @@ body {
   flex-direction: column;
   align-self: flex-start;
   justify-content: center;
+  background-color: white;
 
   padding: var(--padTiny);
   margin-top: var(--margTiny);
@@ -173,11 +174,10 @@ body {
   justify-content: center;
   width: 100%;
   resize: vertical;
+  border: 2px solid lightseagreen;
+  outline: none;
 
   margin: var(--margTiny);
-
-  border: 2px solid lightseagreen;
-  border-radius: 5px;
 }
 
 /* SAVE BUTTON */
@@ -194,11 +194,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: white;
+  background-color: lightseagreen;
 
   margin: var(--margSmall);
-  padding: var(--padTiny);
-
-  background-color: lightseagreen;
+  padding: var(--padSmall);
 }
 
 /* OUTPUT SECTION */
