@@ -2,4 +2,215 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+:root {
+  /* PADDING */
+  --padTiny: 0.5rem;
+  --padSmall: 1rem;
+  --padMedium: 1.5rem;
+  --padLarge: 2rem;
+
+  /* MARGIN */
+  --margTiny: 0.5rem;
+  --margSmall: 1rem;
+  --margMedium: 1.5rem;
+  --margLarge: 2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* change to auto */
+  background-color: lightslategrey;
+}
+
+/* SECTION 1 */
+.section_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: auto;
+}
+
+/* UPPER DIV */
+.upperDiv {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: center;
+  width: 20%;
+  height: auto;
+  background-color: lightgrey;
+  border: 2px solid white;
+
+  padding: var(--padSmall);
+  margin: var(--margLarge);
+}
+
+.upperDiv .titleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+
+  padding: var(--padSmall);
+}
+
+.upperDiv .buttonDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* add question button */
+.upperDiv .buttonDiv .addQestButt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: lightseagreen;
+
+  padding: var(--padSmall);
+}
+
+/* INPUT DIV */
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: auto;
+
+  border: 2px solid white;
+  background-color: lightgrey;
+}
+
+/* X - DIV */
+.x-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 90%;
+
+  margin-top: var(--margSmall);
+}
+
+.x-div .xButt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: lightseagreen;
+  color: white;
+
+  padding: var(--padTiny);
+}
+
+/* ALERT DIV  - CHANGE DISPLAY! */
+.alertDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  background-color: red;
+  color: white;
+
+  padding: var(--padSmall);
+
+  display: none; /* change this */
+}
+
+/* FORM SECTION */
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+
+  margin: var(--margSmall);
+}
+
+.formSection label {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: center;
+
+  padding: var(--padTiny);
+  margin-top: var(--margTiny);
+  margin-bottom: var(--margTiny);
+}
+
+.questionDiv,
+.answerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* textareas */
+.questTxtArea,
+.answTxtArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  resize: vertical;
+
+  margin: var(--margTiny);
+
+  border: 2px solid lightseagreen;
+  border-radius: 5px;
+}
+
+/* SAVE BUTTON */
+.saveButtDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.saveButtDiv .saveButt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: var(--margSmall);
+  padding: var(--padTiny);
+
+  background-color: lightseagreen;
+}
+
+/* OUTPUT SECTION */
+.outputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 70%;
+  height: 10rem; /* change to auto */
+  background-color: lightseagreen;
+
+  margin: var(--margLarge);
 }

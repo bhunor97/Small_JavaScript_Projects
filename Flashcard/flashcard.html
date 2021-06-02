@@ -8,6 +8,62 @@
     <link rel="stylesheet" href="flashcard.css" />
   </head>
   <body>
+    <section class="section_1">
+      <!-- UPPER DIV -->
+      <div class="upperDiv">
+        <div class="titleDiv">Flashcards</div>
+        <div class="buttonDiv">
+          <button class="addQestButt" id="addQuestButt">Add Question</button>
+        </div>
+      </div>
+      <!-- INPUT DIV -->
+      <div id="inputDiv" class="inputDiv">
+        <!-- X" div -->
+        <div class="x-div">
+          <button id="xButt" class="xButt">X</button>
+        </div>
+        <!-- alert div -->
+        <div id="alertDiv" class="alertDiv">Cannot Add Empty Values</div>
+        <!-- FORM SECTION -->
+        <form id="formSection" class="formSection">
+          <!-- question textarea -->
+          <div id="questionDiv" class="questionDiv">
+            <label for="question"> Question</label>
+            <textarea
+              name="question"
+              id="questTxtArea"
+              class="questTxtArea"
+              cols="30"
+              rows="3"
+            >
+Input Text Here
+        </textarea
+            >
+          </div>
+          <!-- answer textarea -->
+          <div id="answerDiv" class="answerDiv">
+            <label for="answer"> Answer</label>
+            <textarea
+              name="answer"
+              id="answTxtArea"
+              class="answTxtArea"
+              cols="30"
+              rows="3"
+            >
+Input Text Here
+        </textarea
+            >
+          </div>
+          <!-- SAVE BUTTON -->
+          <div class="saveButtDiv">
+            <button id="saveButt" class="saveButt">Save</button>
+          </div>
+        </form>
+        <!-- OUTPUT SECTION -->
+      </div>
+      <div id="outputDiv" class="outputDiv">Output Here</div>
+    </section>
+
     <script src="flashcard.js"></script>
   </body>
 </html>
