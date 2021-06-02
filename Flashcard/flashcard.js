@@ -12,6 +12,18 @@ inputSection.style.display = "none";
 alertDiv.style.display = "none";
 outputDiv.style.display = "none";
 
+// FLASHCARD CLASS
+class Flashcard {
+  constructor(question, answer) {
+    this.question = question;
+    this.answer = answer;
+  }
+}
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+});
+
 // ADD QUESTION BUTTON
 addQuestionButt.onclick = () => {
   inputSection.style.display = "block";
