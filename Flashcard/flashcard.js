@@ -122,7 +122,8 @@ xButt.onclick = () => {
 };
 // CLEAR ALL BUTTON
 clearAllButt.onclick = () => {
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
+  outputDiv.style.display = "none";
   alertClearedFunction();
 };
 // ALERT FUNCTION
