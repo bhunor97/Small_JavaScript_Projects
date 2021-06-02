@@ -16,8 +16,6 @@ const picArr = [
   "url(https://base.imgix.net/files/base/ebm/ehstoday/image/2019/12/success.5df78d1970ca4.png?auto=format&fit=max&w=1200)",
 ];
 
-const random = Math.floor(Math.random() * 3);
-
 // DATA CONSTRUCTOR
 class Data {
   constructor(name, course, author) {
@@ -51,6 +49,7 @@ UI.prototype.createOutput = function (data) {
     // new picture div
     let newPicDiv = document.createElement("div");
     newPicDiv.className = "newPicDiv";
+    const random = Math.floor(Math.random() * picArr.length);
     newPicDiv.style.backgroundImage = picArr[random];
     // append
     newSection.appendChild(newPicDiv);
