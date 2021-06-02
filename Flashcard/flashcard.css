@@ -16,7 +16,7 @@
   --margTiny: 0.5rem;
   --margSmall: 1rem;
   --margMedium: 1.5rem;
-  --margLarge: 2rem;
+  --margLarge: 2.5rem;
 }
 
 body {
@@ -90,7 +90,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 80%;
   height: auto;
 
   border: 2px solid white;
@@ -120,17 +120,31 @@ body {
   margin: var(--margTiny);
 }
 
-/* ALERT DIV  - CHANGE DISPLAY! */
-.alertDiv {
+/* ALERT DIV */
+.emptyAlertDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 80%;
   background-color: lightcoral;
   color: white;
 
   padding: var(--padSmall);
+  margin: auto;
+}
+
+.listClearedDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  background-color: green;
+  color: white;
+
+  padding: var(--padSmall);
+  margin: auto;
 }
 
 /* FORM SECTION */
@@ -182,21 +196,24 @@ body {
 /* SAVE BUTTON */
 .saveButtDiv {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 90%;
 }
 
-.saveButtDiv .saveButt {
+.saveButtDiv .saveButt,
+.clearAllButt {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
   background-color: lightseagreen;
+  width: 5em;
+  height: 4em;
 
-  margin: var(--margSmall);
+  margin: var(--margTiny);
   padding: var(--padSmall);
 }
 
@@ -206,10 +223,71 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   width: 70%;
-  height: 10rem; /* change to auto */
-  background-color: lightseagreen;
+  height: auto;
+  background-color: lightgrey;
+  border: 2px solid white;
 
   margin: var(--margLarge);
+}
+
+.newSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 70%;
+  background-color: lightseagreen;
+  border: 1px solid black;
+
+  margin-top: var(--margMedium);
+  margin-bottom: var(--margMedium);
+}
+
+.newInnerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+/* flashcard lines */
+.questionLi,
+.showHideLink,
+.answerLi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+
+  padding: var(--padSmall);
+}
+
+.answerLi {
+  color: white;
+}
+
+.newButtDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  padding: var(--padSmall);
+}
+
+/* new buttons */
+.newButtDiv button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+
+  padding: var(--padTiny);
 }

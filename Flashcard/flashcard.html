@@ -23,7 +23,10 @@
           <button id="xButt" class="xButt">X</button>
         </div>
         <!-- alert div -->
-        <div id="alertDiv" class="alertDiv">Cannot Add Empty Values</div>
+        <div id="emptyAlertDiv" class="emptyAlertDiv">
+          Cannot Add Empty Values
+        </div>
+        <div id="listClearedDiv" class="listClearedDiv">List Cleared!</div>
         <!-- FORM SECTION -->
         <form id="formSection" class="formSection">
           <!-- question textarea -->
@@ -51,11 +54,14 @@
           <!-- SAVE BUTTON -->
           <div class="saveButtDiv">
             <button type="submit" id="saveButt" class="saveButt">Save</button>
+            <button type="button" id="clearAllButt" class="clearAllButt">
+              Clear All
+            </button>
           </div>
         </form>
         <!-- OUTPUT SECTION -->
       </div>
-      <div id="outputDiv" class="outputDiv">Output Here</div>
+      <div id="outputDiv" class="outputDiv"></div>
     </section>
 
     <script src="flashcard.js"></script>
