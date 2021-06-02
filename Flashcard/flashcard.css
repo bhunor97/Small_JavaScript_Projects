@@ -126,12 +126,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   background-color: lightcoral;
   color: white;
 
   padding: var(--padSmall);
-  margin: auto;
+  margin-top: var(--margMedium);
+  margin-bottom: var(--margMedium);
 }
 
 .listClearedDiv {
@@ -139,12 +140,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   background-color: green;
   color: white;
 
   padding: var(--padSmall);
-  margin: auto;
+  margin-top: var(--margMedium);
+  margin-bottom: var(--margMedium);
 }
 
 /* FORM SECTION */
