@@ -48,7 +48,7 @@ UI.prototype.createCard = (flashcard) => {
     let newLinkLi = document.createElement("li");
     newLinkLi.className = "newLinkLi";
     newLinkLi.id = "newLinkId";
-    newLinkLi.innerHTML = `<a href="#">Show/Hide Answer</a>`;
+    newLinkLi.innerHTML = `Show / Hide Answer`;
     newSection.appendChild(newLinkLi);
 
     // new answer
@@ -79,20 +79,27 @@ UI.prototype.createCard = (flashcard) => {
     newButtDiv.appendChild(newDelButt);
 
     // LINK CLICK -> ANSWER
-    let link = document.getElementById("newLinkId");
-    let answer = document.getElementById("newAnswLi");
-    answer.style.visibility = "hidden";
-    link.onclick = function () {
-      if (answer.style.visibility == "hidden") {
-        answer.style.visibility = "visible";
+    newAnswLi.style.visibility = "hidden";
+    newLinkLi.onclick = function () {
+      if (newAnswLi.style.visibility == "hidden") {
+        newAnswLi.style.visibility = "visible";
       } else {
-        answer.style.visibility = "hidden";
+        newAnswLi.style.visibility = "hidden";
       }
     };
+
+    // DELETE CLICK FUNCTION - unfinished
+    let deleteButt = document.getElementById("newDelButt");
+    newSection.addEventListener("click", (event) => {
+      if (event.target.className === "newDelButt") {
+        outputDiv.removeChild(event.target.parentElement.parentElement);
+      }
+    });
 
     // clear fields
     questInput.value = "";
     answInput.value = "";
+    console.log(outputDiv);
   } else {
     alertEmptyFunction();
   }
@@ -107,7 +114,6 @@ form.addEventListener("submit", function (e) {
   const flashcard = new Flashcard(question, answer);
   ui.createCard(flashcard);
 
-  console.log(outputDiv);
   e.preventDefault();
 });
 

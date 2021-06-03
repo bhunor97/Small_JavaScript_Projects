@@ -265,6 +265,16 @@ body {
   color: white;
 }
 
+.newLinkLi {
+  color: white;
+  cursor: pointer;
+}
+
+.newAnswLi {
+  visibility: hidden;
+  color: yellow;
+}
+
 .newButtDiv {
   display: flex;
   flex-direction: row;
