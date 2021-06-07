@@ -1,5 +1,171 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+:root {
+  /* PADDING */
+  --padTiny: 0.3rem;
+  --padSmall: 0.5rem;
+  --padMedium: 1rem;
+  --padLarge: 1.5rem;
+
+  /* MARGIN */
+  --margTiny: 0.3rem;
+  --margSmall: 0.5rem;
+  --margMedium: 1rem;
+  --margLarge: 1.5rem;
+
+  /* HEIGHT */
+  --height_1: 15rem;
+  --heightTitle: 5rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgreen;
+  height: 100vh;
+}
+
+/* CONTAINER */
+.containerSection {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto;
+  background-color: lightskyblue;
+
+  height: auto;
+}
+
+.titleDiv {
+  grid-column: 1/3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+  height: var(--heightTitle);
+}
+
+/* COLUMN_1 */
+.gridColumn_1 {
+  grid-row: 2/4;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.budgetInpDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: var(--height_1);
+}
+
+.budgetInpDiv label,
+input,
+button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: var(--padSmall);
+  margin: var(--margTiny);
+}
+
+.expenseInputDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: var(--height_1);
+}
+
+/* COLUMN_2 */
+.gridColumn_2 {
+  grid-row: 2/4;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.displayDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: var(--height_1);
+}
+
+.budgetDiv,
+.expensesDiv,
+.balanceDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+
+.budgetDiv h2,
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.expensesDiv h2,
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.balanceDiv h2,
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.outputDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
 }
