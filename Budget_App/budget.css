@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 :root {
@@ -20,6 +20,7 @@
 
   /* HEIGHT */
   --height_1: 15rem;
+  --height_2: 25rem;
   --heightTitle: 5rem;
 }
 
@@ -28,7 +29,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightgreen;
+  background-color: #333;
   height: 100vh;
 }
 
@@ -37,7 +38,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto auto auto;
-  background-color: lightskyblue;
+  background-color: lightgrey;
 
   width: 80%;
   height: auto;
@@ -50,8 +51,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  background-color: grey;
+  color: white;
 
   width: 100%;
+
+  margin-bottom: var(--margMedium);
+  padding: var(--padSmall);
   height: var(--heightTitle);
 }
 
@@ -63,17 +69,23 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
   width: 100%;
 }
 
+/* BUDGET INPUT */
 .budgetInpDiv {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  background-color: lightgreen;
 
   width: 100%;
   height: var(--height_1);
+
+  padding: var(--padSmall);
+  margin-bottom: var(--margMedium);
 }
 
 .budgetInpDiv label,
@@ -89,14 +101,29 @@ button {
   margin: var(--margTiny);
 }
 
+.budgetInpDiv label {
+  background-color: grey;
+  color: white;
+}
+
+/* EXPENSE INPUT(S) */
 .expenseInputDiv {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  background-color: lightgreen;
 
   width: 100%;
-  height: var(--height_1);
+  height: var(--height_2);
+
+  padding: var(--padSmall);
+  margin-bottom: var(--margMedium);
+}
+
+.expenseInputDiv label {
+  background-color: grey;
+  color: white;
 }
 
 .expenseInputDiv label,
@@ -123,14 +150,19 @@ button {
   width: 100%;
 }
 
+/* DISPLAY DIV */
 .displayDiv {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: lightblue;
 
   width: 100%;
   height: var(--height_1);
+
+  padding: var(--padSmall);
+  margin-bottom: var(--margMedium);
 }
 
 .budgetDiv,
@@ -174,12 +206,16 @@ div {
   height: 100%;
 }
 
+/* OUTPUT DIV */
 .outputDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: lightblue;
 
   width: 100%;
   height: auto;
+
+  padding: var(--padSmall);
 }
