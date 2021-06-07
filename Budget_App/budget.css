@@ -39,6 +39,7 @@ body {
   grid-template-rows: auto auto auto;
   background-color: lightskyblue;
 
+  width: 80%;
   height: auto;
 }
 
@@ -98,6 +99,19 @@ button {
   height: var(--height_1);
 }
 
+.expenseInputDiv label,
+input,
+button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: var(--padSmall);
+  margin: var(--margTiny);
+}
+
 /* COLUMN_2 */
 .gridColumn_2 {
   grid-row: 2/4;
@@ -126,8 +140,8 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%; /* check the size */
 }
 
 .budgetDiv h2,
