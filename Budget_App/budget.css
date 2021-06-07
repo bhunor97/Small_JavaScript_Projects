@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 :root {
@@ -100,6 +100,20 @@ button {
 .budgetInpDiv label {
   background-color: grey;
   color: white;
+}
+
+/* ALERT DIV */
+.alertDiv_1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  width: 90%;
+
+  height: var(--heightTitle);
+  margin-bottom: var(--margMedium);
 }
 
 /* EXPENSE INPUT(S) */

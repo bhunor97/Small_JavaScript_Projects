@@ -1,5 +1,6 @@
 const budgetInp = document.getElementById("budgetInput");
 const calcButt = document.getElementById("budgetInputButt");
+const alertDiv = document.getElementById("alertDiv_1");
 const expNameInp = document.getElementById("expInpName");
 const expAmountInp = document.getElementById("expAmount");
 const addExpButt = document.getElementById("addExpButt");
@@ -9,6 +10,8 @@ const expDisp = document.getElementById("expensesDisplay");
 const balanceDisp = document.getElementById("balanceDisplay");
 const outputDiv = document.getElementById("outputDiv");
 const outputTBody = document.getElementById("outputTBody");
+
+alertDiv.style.display = "none";
 
 // EXPENSES CLASS
 class Expenses {
@@ -22,34 +25,40 @@ class Expenses {
 function UI() {}
 
 UI.prototype.addExpToTable = function (expenses) {
-  // new Th
-  let newThTitle = document.createElement("th");
-  let newThValue = document.createElement("th");
-  const newThDel = document.createElement("th");
-  newThDel.className = "delButt";
-  newThDel.id = "delButt";
-  newThDel.style.backgroundColor = "red";
-  newThDel.style.color = "white";
+  if (!expNameInp.value == "" || !expAmountInp.value == "") {
+    // new Th
+    let newThTitle = document.createElement("th");
+    let newThValue = document.createElement("th");
+    newThValue.className = "newThValue";
+    newThValue.style.color = "red";
+    const newThDel = document.createElement("th");
+    newThDel.className = "delButt";
+    newThDel.id = "delButt";
+    newThDel.style.backgroundColor = "red";
+    newThDel.style.color = "white";
 
-  // Th value
-  newThTitle.innerHTML = expNameInp.value;
-  newThValue.innerHTML = expAmountInp.value;
-  newThDel.innerHTML = `Delete`;
+    // Th value
+    newThTitle.innerHTML = expNameInp.value;
+    newThValue.innerHTML = `$ ${expAmountInp.value}`;
+    newThDel.innerHTML = `Delete`;
 
-  // new Tr
-  let newTr = document.createElement("tr");
-  newTr.appendChild(newThTitle);
-  newTr.appendChild(newThValue);
-  newTr.appendChild(newThDel);
+    // new Tr
+    let newTr = document.createElement("tr");
+    newTr.appendChild(newThTitle);
+    newTr.appendChild(newThValue);
+    newTr.appendChild(newThDel);
 
-  outputTBody.appendChild(newTr);
+    outputTBody.appendChild(newTr);
 
-  // dynamic delete
-  outputTBody.onclick = (event) => {
-    if (event.target.className == "delButt") {
-      outputTBody.removeChild(event.target.parentElement);
-    }
-  };
+    // dynamic delete
+    outputTBody.onclick = (event) => {
+      if (event.target.className == "delButt") {
+        outputTBody.removeChild(event.target.parentElement);
+      }
+    };
+  } else {
+    alertFunc();
+  }
 };
 
 // ADD EXPENSE BUTTON
@@ -61,9 +70,6 @@ addExpButt.onclick = () => {
 
   let expenses = new Expenses(title, value);
   let ui = new UI();
-
-  console.log(ui);
-
   ui.addExpToTable(expenses);
 
   expNameInp.value = "";
@@ -82,10 +88,16 @@ clearAllButt.onclick = () => {
   budgetInp.value = "";
   expNameInp.value = "";
   expAmountInp.value = "";
-
   budgetDisp.innerHTML = `$ 0`;
   expDisp.innerHTML = `$ 0`;
   balanceDisp.innerHTML = `$ 0`;
-
   outputTBody.innerHTML = "";
+};
+
+// ALERT
+alertFunc = () => {
+  alertDiv.style.display = "flex";
+  setTimeout(function () {
+    alertDiv.style.display = "none";
+  }, 2000);
 };
