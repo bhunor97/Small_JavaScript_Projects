@@ -9,14 +9,16 @@
   </head>
   <body>
     <section class="containerSection">
-      <div class="titleDiv">Budget App</div>
+      <div class="titleDiv">
+        <h1>Budget App</h1>
+      </div>
       <!-- GRID COLUMN_1 -->
       <div class="gridColumn_1">
         <!-- BUDGET -->
         <div id="budgetInpDiv" class="budgetInpDiv">
           <label for="budgetInput">Please Enter Your Budget</label>
           <input type="number" name="budgetInput" id="budgetInput" />
-          <button>Calculate</button>
+          <button id="budgetInputButt" class="budgetInputButt">Calculate</button>
         </div>
         <!-- EXPENSE -->
         <div id="expenseInputDiv" class="expenseInputDiv">
@@ -24,7 +26,8 @@
           <input type="text" name="expInpName" id="expInpName" />
           <label for="expAmount">Please Enter Expense Amount</label>
           <input type="number" name="expAmount" id="expAmount" />
-          <button>Add Expense</button>
+          <button id="addExpButt" class="addExpButt">Add Expense</button>
+          <button id="clearButt" class="clearButt">Clear All</button>
         </div>
       </div>
       <!-- GRID COLUMN_2 -->
@@ -34,58 +37,45 @@
           <div class="budgetDiv">
             <h2>Budget</h2>
             <div class="iconDiv">Icon Here</div>
-            <div id="budgetDisplay" class="budgetDisplay">Budget Disp</div>
+            <div id="budgetDisplay" class="budgetDisplay">$ 0</div>
           </div>
 
           <div class="expensesDiv">
             <h2>Expenses</h2>
             <div class="iconDiv">Icon Here</div>
             <div id="expensesDisplay" class="expensesDisplay">
-              Expenses Disp
+              $ 0
             </div>
           </div>
 
           <div class="balanceDiv">
             <h2>Balance</h2>
             <div class="iconDiv">Icon Here</div>
-            <div id="balanceDisplay" class="blanaceDisplay">Balance Disp</div>
+            <div id="balanceDisplay" class="blanaceDisplay">$ 0</div>
           </div>
         </div>
         <!-- OUTPUT -->
         <div id="outputDiv" class="outputDiv">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-          adipisci rem iste fuga amet quisquam quis facere, non, inventore
-          fugiat perspiciatis commodi voluptatibus aut repudiandae neque,
-          distinctio quasi sunt unde nam qui? Rerum ipsa velit nulla, quod est
-          numquam, harum quibusdam hic odio, ut natus vel soluta esse minima
-          placeat repellendus voluptatem ipsam! Ea blanditiis, nostrum veniam
-          magnam sit unde saepe distinctio suscipit doloremque debitis inventore
-          minima, tempore necessitatibus nemo repellat placeat vitae officia
-          corrupti reiciendis in! Quae error quis atque quas quod tenetur
-          placeat illum omnis at vero vitae incidunt culpa harum, id sapiente
-          reiciendis similique eaque modi quos. Lorem ipsum dolor, sit amet
-          consectetur adipisicing elit. Maiores at excepturi voluptates, aliquam
-          dolorem vitae recusandae distinctio! Suscipit esse necessitatibus
-          temporibus beatae nihil expedita ipsum rem quisquam? Perspiciatis
-          maxime omnis inventore odit sequi, dignissimos quaerat dolore sed
-          nisi. Corrupti possimus asperiores obcaecati inventore praesentium
-          voluptatum perferendis officiis nulla, ab magni.ASDAsdasdasdasdasd
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-          consectetur quibusdam iste deserunt in laboriosam. Facilis quaerat
-          quos rerum provident. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Provident sint quam nemo nam in non? Dolorem
-          molestiae dolorum magnam libero nostrum corporis cupiditate cum!
-          Eligendi quisquam asperiores, fugiat vero, ipsum soluta vel earum
-          vitae sit libero sunt officiis aperiam nisi repellat incidunt
-          inventore optio repudiandae explicabo ea, ipsam consequuntur. Nostrum
-          blanditiis sapiente nam deleniti adipisci totam, pariatur odio id
-          tempore alias dolor error recusandae quia fuga temporibus, saepe fugit
-          ipsum voluptatum, ab autem fugiat officia. Adipisci et sequi numquam
-          dolore itaque blanditiis doloribus assumenda beatae. Nulla consectetur
-          vitae numquam ad vero saepe nesciunt, aliquam, repellat inventore
-          blanditiis, adipisci facilis magni.
-        </div>
+          <!-- TABLE -->
+          <table id="outputTable" class="outputTable">
+            <thead>
+              <tr>
+                <th>
+                  Expense Title
+                </th>
+                <th>
+                  Expense Value
+                </th>
+                <th>
+                </th>
+              </tr>
+            </thead>
+            <!-- dynamically instert values here -->
+            <tbody id="outputTBody">
+            </tbody>
+          </table>
       </div>
     </section>
+    <script src="budget.js"></script>
   </body>
 </html>
