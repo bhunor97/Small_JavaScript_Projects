@@ -1,6 +1,7 @@
 const budgetInp = document.getElementById("budgetInput");
 const calcButt = document.getElementById("budgetInputButt");
-const alertDiv = document.getElementById("alertDiv_1");
+const alertEmpty = document.getElementById("alertDiv_1");
+const alertClear = document.getElementById("alertDiv_2");
 const expNameInp = document.getElementById("expInpName");
 const expAmountInp = document.getElementById("expAmount");
 const addExpButt = document.getElementById("addExpButt");
@@ -11,7 +12,8 @@ const balanceDisp = document.getElementById("balanceDisplay");
 const outputDiv = document.getElementById("outputDiv");
 const outputTBody = document.getElementById("outputTBody");
 
-alertDiv.style.display = "none";
+alertEmpty.style.display = "none";
+alertClear.style.display = "none";
 
 // EXPENSES CLASS
 class Expenses {
@@ -29,7 +31,6 @@ UI.prototype.addExpToTable = function (expenses) {
     // new Th
     let newThTitle = document.createElement("th");
     let newThValue = document.createElement("th");
-    newThValue.className = "newThValue";
     newThValue.style.color = "red";
     const newThDel = document.createElement("th");
     newThDel.className = "delButt";
@@ -57,13 +58,14 @@ UI.prototype.addExpToTable = function (expenses) {
       }
     };
   } else {
-    alertFunc();
+    alertFunc(alertEmpty);
   }
 };
 
 // ADD EXPENSE BUTTON
 addExpButt.onclick = () => {
   expDisp.innerHTML = `$ ${expAmountInp.value}`;
+  expDisp.style.color = "red";
 
   let title = expNameInp.value;
   let value = expAmountInp.value;
@@ -78,9 +80,15 @@ addExpButt.onclick = () => {
 
 // CALCULATE BUTTON
 calcButt.onclick = () => {
-  budgetDisp.innerHTML = `$ ${budgetInp.value}`;
-  balanceDisp.innerHTML = `$ ${budgetInp.value}`;
-  budgetInp.value = "";
+  if (!budgetInp.value == "") {
+    budgetDisp.innerHTML = `$ ${budgetInp.value}`;
+    balanceDisp.innerHTML = `$ ${budgetInp.value}`;
+    budgetDisp.style.color = "green";
+    balanceDisp.style.color = "green";
+    budgetInp.value = "";
+  } else {
+    alertFunc();
+  }
 };
 
 // CLEAR ALL BUTTON
@@ -92,12 +100,13 @@ clearAllButt.onclick = () => {
   expDisp.innerHTML = `$ 0`;
   balanceDisp.innerHTML = `$ 0`;
   outputTBody.innerHTML = "";
+  alertFunc(alertClear);
 };
 
 // ALERT
-alertFunc = () => {
-  alertDiv.style.display = "flex";
+alertFunc = (alert) => {
+  alert.style.display = "flex";
   setTimeout(function () {
-    alertDiv.style.display = "none";
+    alert.style.display = "none";
   }, 2000);
 };
