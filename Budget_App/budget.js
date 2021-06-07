@@ -25,7 +25,9 @@ UI.prototype.addExpToTable = function (expenses) {
   // new Th
   let newThTitle = document.createElement("th");
   let newThValue = document.createElement("th");
-  let newThDel = document.createElement("th");
+  const newThDel = document.createElement("th");
+  newThDel.className = "delButt";
+  newThDel.id = "delButt";
   newThDel.style.backgroundColor = "red";
   newThDel.style.color = "white";
 
@@ -41,6 +43,13 @@ UI.prototype.addExpToTable = function (expenses) {
   newTr.appendChild(newThDel);
 
   outputTBody.appendChild(newTr);
+
+  // dynamic delete
+  outputTBody.onclick = (event) => {
+    if (event.target.className == "delButt") {
+      outputTBody.removeChild(event.target.parentElement);
+    }
+  };
 };
 
 // ADD EXPENSE BUTTON

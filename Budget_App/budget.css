@@ -218,3 +218,7 @@ thead tr th {
   color: white;
   padding: var(--padMedium);
 }
+
+.delButt {
+  cursor: pointer;
+}
