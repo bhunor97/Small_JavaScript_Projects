@@ -75,10 +75,14 @@ body {
   justify-content: space-around;
   align-items: center;
   background-color: lightgreen;
-  width: 100%;
+  width: 90%;
   height: var(--height_1);
   padding: var(--padSmall);
   margin-bottom: var(--margMedium);
+}
+
+.material-icons {
+  font-size: 36px;
 }
 
 .budgetInpDiv label,
@@ -105,7 +109,7 @@ button {
   justify-content: space-around;
   align-items: center;
   background-color: lightgreen;
-  width: 100%;
+  width: 90%;
   height: var(--height_2);
   padding: var(--padSmall);
   margin-bottom: var(--margMedium);
@@ -128,6 +132,30 @@ button {
   margin: var(--margTiny);
 }
 
+.addExpButt {
+  transition: 0.2s ease;
+}
+
+.addExpButt:hover {
+  background-color: lightskyblue;
+}
+
+.clearButt {
+  transition: 0.2s ease;
+}
+
+.clearButt:hover {
+  background-color: lightcoral;
+}
+
+.budgetInputButt {
+  transition: 0.2s ease;
+}
+
+.budgetInputButt:hover {
+  background-color: lightskyblue;
+}
+
 /* COLUMN_2 */
 .gridColumn_2 {
   grid-row: 2/4;
@@ -145,7 +173,7 @@ button {
   justify-content: space-between;
   align-items: center;
   background-color: lightblue;
-  width: 100%;
+  width: 90%;
   height: var(--height_1);
   padding: var(--padSmall);
   margin-bottom: var(--margMedium);
@@ -161,6 +189,7 @@ button {
   width: 100%;
   height: 100%; /* check the size */
 }
+
 .displayDiv h2 {
   background-color: lightseagreen;
   color: white;
@@ -203,7 +232,7 @@ div {
   justify-content: center;
   align-items: center;
   background-color: lightblue;
-  width: 100%;
+  width: 90%;
   height: auto;
   padding: var(--padSmall);
 }

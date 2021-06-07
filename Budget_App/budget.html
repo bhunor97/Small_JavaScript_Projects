@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Budget App Project</title>
     <link rel="stylesheet" href="budget.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <section class="containerSection">
@@ -17,15 +18,15 @@
         <!-- BUDGET -->
         <div id="budgetInpDiv" class="budgetInpDiv">
           <label for="budgetInput">Please Enter Your Budget</label>
-          <input type="number" name="budgetInput" id="budgetInput" />
+          <input type="number" name="budgetInput" id="budgetInput" placeholder="Your Budget"/>
           <button id="budgetInputButt" class="budgetInputButt">Calculate</button>
         </div>
         <!-- EXPENSE -->
         <div id="expenseInputDiv" class="expenseInputDiv">
           <label for="expInpName">Please Enter Your Expense</label>
-          <input type="text" name="expInpName" id="expInpName" />
+          <input type="text" name="expInpName" id="expInpName" placeholder="Expense Title"/>
           <label for="expAmount">Please Enter Expense Amount</label>
-          <input type="number" name="expAmount" id="expAmount" />
+          <input type="number" name="expAmount" id="expAmount" placeholder="Expense Amount"/>
           <button id="addExpButt" class="addExpButt">Add Expense</button>
           <button id="clearButt" class="clearButt">Clear All</button>
         </div>
@@ -36,13 +37,17 @@
         <div id="displayDiv" class="displayDiv">
           <div class="budgetDiv">
             <h2>Budget</h2>
-            <div class="iconDiv">Icon Here</div>
+            <div class="iconDiv">
+              <i class="material-icons">local_atm</i>
+            </div>
             <div id="budgetDisplay" class="budgetDisplay">$ 0</div>
           </div>
 
           <div class="expensesDiv">
             <h2>Expenses</h2>
-            <div class="iconDiv">Icon Here</div>
+            <div class="iconDiv">
+              <i class="material-icons">credit_card</i>
+            </div>
             <div id="expensesDisplay" class="expensesDisplay">
               $ 0
             </div>
@@ -50,7 +55,9 @@
 
           <div class="balanceDiv">
             <h2>Balance</h2>
-            <div class="iconDiv">Icon Here</div>
+            <div class="iconDiv">
+              <i class="material-icons">attach_money</i>
+            </div>
             <div id="balanceDisplay" class="blanaceDisplay">$ 0</div>
           </div>
         </div>
@@ -72,6 +79,11 @@
             </thead>
             <!-- dynamically instert values here -->
             <tbody id="outputTBody">
+              <tr>
+                <th>
+    
+                </th>
+              </tr>
             </tbody>
           </table>
       </div>
