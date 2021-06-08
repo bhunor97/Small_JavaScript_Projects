@@ -69,11 +69,9 @@ UI.prototype.addExpToTable = function (expenses) {
 calcButt.onclick = () => {
   if (!budgetInp.value == "") {
     // budget calc static
-    budgetValue = 0;
     budgetValue = budgetInp.value;
     budgetDisp.innerHTML = `$ ${budgetValue}`;
     // balance calc static
-    balanceValue = 0;
     balanceValue = budgetInp.value;
     balanceDisp.innerHTML = `$ ${balanceValue}`;
 
@@ -88,7 +86,7 @@ addExpButt.onclick = () => {
   let title = expNameInp.value;
   let value = expAmountInp.value;
   // expense
-  expenseValue = parseInt(expenseValue) + parseInt(expAmountInp.value);
+  expenseValue = parseInt(expenseValue) + parseInt(value);
   expDisp.innerHTML = `$ ${expenseValue}`;
   // balance
   balanceDisp.innerHTML = `$ ${balanceValue - expenseValue}`;
@@ -101,19 +99,26 @@ addExpButt.onclick = () => {
   expAmountInp.value = "";
 
   const extraValue = expenses.value;
+  console.log(typeof expDisp.innerHTML);
+  console.log(typeof balanceDisp.innerHTML);
 
   // delete onclick
   outputTBody.onclick = (event) => {
     if (event.target.className == "delButt") {
       outputTBody.removeChild(event.target.parentElement);
+      let addedValue = removeDella(event.target.previousSibling.innerHTML);
       // add deleted values
-      expDisp.innerHTML = parseInt(expDisp.innerHTML) - parseInt(extraValue);
+      console.log(typeof expDisp.innerHTML);
+      console.log(typeof addedValue);
+      expDisp.innerHTML =
+        removeDella(expDisp.innerHTML) - removeDella(addedValue);
       balanceDisp.innerHTML =
-        parseInt(balanceDisp.innerHTML) + parseInt(extraValue);
+        removeDella(balanceDisp.innerHTML) + removeDella(addedValue);
+      // adding $
+      expDisp.innerHTML = `$ ${expDisp.innerHTML}`;
+      balanceDisp.innerHTML = `$ ${balanceDisp.innerHTML}`;
     }
   };
-  console.log(expenses);
-  console.log(extraValue);
 };
 
 // CLEAR ALL BUTTON
@@ -136,4 +141,13 @@ alertFunc = (alert) => {
   setTimeout(function () {
     alert.style.display = "none";
   }, 2000);
+};
+
+// REMOVE $ FUNCTION
+removeDella = (x) => {
+  if (typeof x === "string") {
+    return parseInt(x.replace("$ ", ""));
+  } else {
+    return x;
+  }
 };
