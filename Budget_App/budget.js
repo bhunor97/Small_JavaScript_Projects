@@ -38,6 +38,8 @@ UI.prototype.addExpToTable = function (expenses) {
     // new Th
     let newThTitle = document.createElement("th");
     let newThValue = document.createElement("th");
+    newThTitle.className = "newThTitle";
+    newThValue.className = "newThValue";
     newThValue.style.color = "red";
     // delete
     const newThDel = document.createElement("th");
@@ -56,16 +58,10 @@ UI.prototype.addExpToTable = function (expenses) {
     newTr.appendChild(newThDel);
 
     outputTBody.appendChild(newTr);
-
-    // delete onclick
-    outputTBody.onclick = (event) => {
-      if (event.target.className == "delButt") {
-        outputTBody.removeChild(event.target.parentElement);
-        addDelValue(parseInt(expenses.value));
-      }
-    };
   } else {
     alertFunc(alertEmpty);
+    expDisp.innerHTML = `$ 0`;
+    balanceDisp.innerHTML = `$ 0`;
   }
 };
 
@@ -75,11 +71,11 @@ calcButt.onclick = () => {
     // budget calc static
     budgetValue = 0;
     budgetValue = budgetInp.value;
-    budgetDisp.innerHTML = budgetValue;
+    budgetDisp.innerHTML = `$ ${budgetValue}`;
     // balance calc static
     balanceValue = 0;
     balanceValue = budgetInp.value;
-    balanceDisp.innerHTML = balanceValue;
+    balanceDisp.innerHTML = `$ ${balanceValue}`;
 
     budgetInp.value = "";
   } else {
@@ -91,21 +87,33 @@ calcButt.onclick = () => {
 addExpButt.onclick = () => {
   let title = expNameInp.value;
   let value = expAmountInp.value;
-
   // expense
   expenseValue = parseInt(expenseValue) + parseInt(expAmountInp.value);
-  expDisp.innerHTML = expenseValue;
-
+  expDisp.innerHTML = `$ ${expenseValue}`;
   // balance
-  balanceDisp.innerHTML = balanceValue - expenseValue;
-
-  let expenses = new Expenses(title, value);
-  let ui = new UI();
+  balanceDisp.innerHTML = `$ ${balanceValue - expenseValue}`;
+  // class / prototype
+  const expenses = new Expenses(title, value);
+  const ui = new UI();
   ui.addExpToTable(expenses);
-
+  // clear fields
   expNameInp.value = "";
   expAmountInp.value = "";
-  console.log(balanceValue);
+
+  const extraValue = expenses.value;
+
+  // delete onclick
+  outputTBody.onclick = (event) => {
+    if (event.target.className == "delButt") {
+      outputTBody.removeChild(event.target.parentElement);
+      // add deleted values
+      expDisp.innerHTML = parseInt(expDisp.innerHTML) - parseInt(extraValue);
+      balanceDisp.innerHTML =
+        parseInt(balanceDisp.innerHTML) + parseInt(extraValue);
+    }
+  };
+  console.log(expenses);
+  console.log(extraValue);
 };
 
 // CLEAR ALL BUTTON
@@ -129,10 +137,3 @@ alertFunc = (alert) => {
     alert.style.display = "none";
   }, 2000);
 };
-
-// ADD DELETED VALUE
-// addDelValue = (x) => {
-//   balanceDisp.innerHTML = budgetValue - value - x;
-//   expenseValue = parseInt(expenseValue) + parseInt(expAmountInp.value);
-//   expDisp.innerHTML = expenseValue + x;
-// };
