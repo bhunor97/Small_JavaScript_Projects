@@ -15,6 +15,13 @@ const outputTBody = document.getElementById("outputTBody");
 alertEmpty.style.display = "none";
 alertClear.style.display = "none";
 
+// let budgetValue = budgetDisp.innerHTML;
+let budgetValue = 0;
+// let balanceValue = balanceDisp.innerHTML;
+let balanceValue = 0;
+// let expenseValue = expDisp.innerHTML;
+let expenseValue = 0;
+
 // EXPENSES CLASS
 class Expenses {
   constructor(title, value) {
@@ -32,17 +39,16 @@ UI.prototype.addExpToTable = function (expenses) {
     let newThTitle = document.createElement("th");
     let newThValue = document.createElement("th");
     newThValue.style.color = "red";
+    // delete
     const newThDel = document.createElement("th");
     newThDel.className = "delButt";
     newThDel.id = "delButt";
     newThDel.style.backgroundColor = "red";
     newThDel.style.color = "white";
-
     // Th value
     newThTitle.innerHTML = expNameInp.value;
     newThValue.innerHTML = `$ ${expAmountInp.value}`;
     newThDel.innerHTML = `Delete`;
-
     // new Tr
     let newTr = document.createElement("tr");
     newTr.appendChild(newThTitle);
@@ -51,10 +57,11 @@ UI.prototype.addExpToTable = function (expenses) {
 
     outputTBody.appendChild(newTr);
 
-    // dynamic delete
+    // delete onclick
     outputTBody.onclick = (event) => {
       if (event.target.className == "delButt") {
         outputTBody.removeChild(event.target.parentElement);
+        addDelValue(parseInt(expenses.value));
       }
     };
   } else {
@@ -62,13 +69,35 @@ UI.prototype.addExpToTable = function (expenses) {
   }
 };
 
+// CALCULATE BUTTON
+calcButt.onclick = () => {
+  if (!budgetInp.value == "") {
+    // budget calc static
+    budgetValue = 0;
+    budgetValue = budgetInp.value;
+    budgetDisp.innerHTML = budgetValue;
+    // balance calc static
+    balanceValue = 0;
+    balanceValue = budgetInp.value;
+    balanceDisp.innerHTML = balanceValue;
+
+    budgetInp.value = "";
+  } else {
+    alertFunc(alertEmpty);
+  }
+};
+
 // ADD EXPENSE BUTTON
 addExpButt.onclick = () => {
-  expDisp.innerHTML = `$ ${expAmountInp.value}`;
-  expDisp.style.color = "red";
-
   let title = expNameInp.value;
   let value = expAmountInp.value;
+
+  // expense
+  expenseValue = parseInt(expenseValue) + parseInt(expAmountInp.value);
+  expDisp.innerHTML = expenseValue;
+
+  // balance
+  balanceDisp.innerHTML = balanceValue - expenseValue;
 
   let expenses = new Expenses(title, value);
   let ui = new UI();
@@ -76,19 +105,7 @@ addExpButt.onclick = () => {
 
   expNameInp.value = "";
   expAmountInp.value = "";
-};
-
-// CALCULATE BUTTON
-calcButt.onclick = () => {
-  if (!budgetInp.value == "") {
-    budgetDisp.innerHTML = `$ ${budgetInp.value}`;
-    balanceDisp.innerHTML = `$ ${budgetInp.value}`;
-    budgetDisp.style.color = "green";
-    balanceDisp.style.color = "green";
-    budgetInp.value = "";
-  } else {
-    alertFunc();
-  }
+  console.log(balanceValue);
 };
 
 // CLEAR ALL BUTTON
@@ -100,6 +117,8 @@ clearAllButt.onclick = () => {
   expDisp.innerHTML = `$ 0`;
   balanceDisp.innerHTML = `$ 0`;
   outputTBody.innerHTML = "";
+  budgetValue = 0;
+  expenseValue = 0;
   alertFunc(alertClear);
 };
 
@@ -110,3 +129,10 @@ alertFunc = (alert) => {
     alert.style.display = "none";
   }, 2000);
 };
+
+// ADD DELETED VALUE
+// addDelValue = (x) => {
+//   balanceDisp.innerHTML = budgetValue - value - x;
+//   expenseValue = parseInt(expenseValue) + parseInt(expAmountInp.value);
+//   expDisp.innerHTML = expenseValue + x;
+// };
