@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+body {
+  display: flex;
+}
+
+h1 {
+  color: white;
+}
+
+.top-image {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/53959f2ce4b0d0ce55449ea5/1501672305667-MYUH3RQI0UMPF7BPCCUU/Chuck+Norris.jpg?format=2500w");
+  background-position: center;
+  background-size: cover;
+  border-radius: 100px;
+  border: 5px solid white;
+  height: 200px;
+  width: 200px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(228, 148, 0, 0.788);
+  border-radius: 25px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  width: auto;
+  padding: 2.5rem;
+  border: 5px solid white;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+.joke-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 2.5rem;
+  box-shadow: 1px 1px 1px black;
+  width: auto;
+  padding: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.get-joke-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 150px;
+  font-size: 1rem;
+  box-shadow: 1px 1px 1px black;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+  transition: 0.1s ease;
+}
+
+.get-joke-button:active {
+  transform: scale(0.9);
+}
