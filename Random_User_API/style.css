@@ -2,11 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid black;
+  /* border: 1px solid black;s */
 }
 
 body {
   height: 100vh;
+  background-image: linear-gradient(360deg, white, rgba(0, 0, 172, 0.774));
 }
 
 .container {
@@ -18,16 +19,44 @@ body {
   margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 10px;
+  background-color: rgba(4, 24, 138, 0.699);
+  box-shadow: 4px 4px 4px 4px rgb(59, 59, 59);
+}
+
+h1 {
+  padding: 2rem;
+  color: white;
 }
 
 .image-div {
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  height: 100%;
   width: 100%;
 }
 
+.img-generated {
+  border-radius: 10px;
+  width: 50%;
+  border: 2px solid white;
+}
+
 .name-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   list-style: none;
+  background-color: white;
+}
+
+li {
+  padding: 10px;
 }
 
 .button-div {
@@ -43,9 +72,15 @@ body {
 .generate-person-button {
   border: none;
   padding: 1em;
-  transition: 0.1s ease;
+  transition: 0.2s ease;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .generate-person-button:active {
   transform: scale(0.9);
+}
+.generate-person-button:hover {
+  color: white;
+  background-color: rgba(4, 24, 138, 0.699);
 }
