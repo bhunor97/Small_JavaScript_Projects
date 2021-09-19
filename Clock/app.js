@@ -41,5 +41,19 @@ const ctx = canvas.getContext("2d");
 // circle
 ctx.beginPath();
 // ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
-ctx.arc(canvas.width / 2, canvas.width / 2, 200, 0, Math.PI * 2);
+ctx.arc(canvas.width / 2, canvas.width / 2, 300, 0, Math.PI * 2);
 ctx.stroke();
+
+const centerX = canvas.width / 2;
+const centerY = canvas.height / 2;
+
+ctx.moveTo(centerX, centerY);
+ctx.arc(centerX, centerY, 10, 0, Math.PI * 2);
+ctx.stroke();
+
+ctx.font = "30px serif";
+ctx.textAlign = "center";
+ctx.fillText("12", centerX, centerY - 280);
+ctx.fillText("6", centerX, centerY + 280);
+ctx.fillText("3", centerX + 280, centerY);
+ctx.fillText("9", centerX - 280, centerY);
